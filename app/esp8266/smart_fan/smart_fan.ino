@@ -5,12 +5,12 @@
 
 #define FAN_SPEED_1 5
 #define FAN_SPEED_2 4
-#define FAN_SPEED_3 14
+#define FAN_SPEED_3 16
 
 // Connect to the WiFi
-const char* ssid = "WIFI_SSID";
-const char* password = "WIFI_PASSWD";
-const char* mqtt_server = "MQTT_BROKER_IP";
+const char* ssid = "BikeBarn";
+const char* password = "Ducati-1098S";
+const char* mqtt_server = "10.39.1.53";
 
 const char* speed_topic = "smartfan/speed";
 const char* status_topic = "smartfan/status";
