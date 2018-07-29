@@ -1,0 +1,116 @@
+--------------------------------------------------------------------------------
+nrfjprog -f nrf52 --program out.hex --sectorerase --log
+nrfjprog version 9.7.3
+--------------------------------------------------------------------------------
+nRF_open_dll
+. nRF52_open_dll
+. . nRF52_dll_version
+nRF_enum_emu_snr
+. nRF52_enum_emu_snr
+. . nRF52_enum_emu_snr
+nRF_enum_emu_snr
+. nRF52_enum_emu_snr
+. . nRF52_enum_emu_snr
+nRF_connect_to_emu_with_snr
+. nRF52_connect_to_emu_with_snr
+. . nRF52_is_connected_to_emu
+. . nRF52_enum_emu_snr
+. . nRF52_connect_to_emu_with_snr
+. . . nRF52_connect_to_emu_without_snr
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 Firmware: J-Link OB-SAM3U128-V2-NordicSemi compiled Jul 12 2018 11:44:41
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 Hardware: V1.00
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 S/N: 682471711
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 TELNET listener socket opened on port 19021
+. . . nRF52_connect_to_emu_without_snr:	JLink:	WEBSRV  Starting webserver
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0003ms, 0403ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:400 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	WEBSRV Webserver running on local port 19080
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0003ms, 0403ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:400 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	  returns O.K.
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0003ms, 0403ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:403 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	JLINK_GetHWStatus(...)
+. . . nRF52_connect_to_emu_without_snr:	JLink:	  returns 0x00
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0000ms, 0403ms total)  
+. . . nRF52_connect_to_emu_without_snr:	There is no generic nRF52 device in J-Link, so we select NRF52832_xxAA.
+
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:403 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	JLINK_ExecCommand("Device = NRF52832_xxAA", ...). 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	XML file found at: /opt/SEGGER/JLink/JLinkDevices.xml
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0001ms, 0404ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:403 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	/opt/SEGGER/JLink/JLinkDevices.xml evaluated successfully.
+. . . nRF52_connect_to_emu_without_snr:	JLink:	Device "NRF52832_XXAA" selected.
+. . . nRF52_connect_to_emu_without_snr:	JLink:	Device "NRF52832_XXAA" selected.
+. . . nRF52_connect_to_emu_without_snr:	JLink:	  returns 0x00
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0016ms, 0419ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:419 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	JLINK_ExecCommand("SetRestartOnClose = 0", ...). 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	  returns 0x01
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0000ms, 0419ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:419 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	JLINK_ExecCommand("DisableFlashDL", ...). 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	  returns 0x00
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0000ms, 0419ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:419 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	JLINK_ExecCommand("SetDbgPowerDownOnClose = 1", ...). 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	  returns 0x01
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0000ms, 0419ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:419 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	JLINK_ExecCommand("ExcludeFlashCacheRange 0x0-0xFFFFFFFF", ...). 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	  returns 0x00
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0000ms, 0419ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:419 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	JLINK_TIF_Select(JLINKARM_TIF_SWD)
+. . . nRF52_connect_to_emu_without_snr:	JLink:	  returns 0x00
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0000ms, 0419ms total)  
+. . . nRF52_connect_to_emu_without_snr:	JLink:	TB3771740 000:419 
+. . . nRF52_connect_to_emu_without_snr:	JLink:	JLINK_SetSpeed(2000)
+. . . nRF52_connect_to_emu_without_snr:	JLink:	 (0001ms, 0420ms total)  
+nRF_read_device_version
+. nRF52_read_device_version
+. . nRF52_is_connected_to_emu
+. . nRF52_is_connected_to_emu:	JLink:	TB3771740 000:420 
+. . nRF52_is_connected_to_emu:	JLink:	JLINK_IsOpen()
+. . nRF52_is_connected_to_emu:	JLink:	  returns 0x01
+. . nRF52_is_connected_to_emu:	JLink:	 (0000ms, 0420ms total)  
+. . nRF52_is_connected_to_device
+. . nRF52_is_connected_to_device:	JLink:	TB3771740 000:420 
+. . nRF52_is_connected_to_device:	JLink:	JLINK_IsConnected()
+. . nRF52_is_connected_to_device:	JLink:	  returns FALSE
+. . nRF52_is_connected_to_device:	JLink:	 (0000ms, 0420ms total)  
+. . nRF52_readback_status
+. . . nRF52_is_ctrl_ap_available
+. . . . nRF52_read_access_port_register
+. . . . . nRF52_coresight_configure
+. . . . . nRF52_coresight_configure:	JLink:	TB3771740 000:420 
+. . . . . nRF52_coresight_configure:	JLink:	JLINK_CORESIGHT_Configure()
+. . . . . nRF52_coresight_configure:	JLink:	  returns 0
+. . . . . nRF52_coresight_configure:	JLink:	 (0100ms, 0520ms total)  
+. . . . . nRF52_power_debug_and_system_regions
+. . . . . . nRF52_write_debug_port_register
+. . . . . . nRF52_write_debug_port_register:	JLink:	TB3771740 000:520 
+. . . . . . nRF52_write_debug_port_register:	JLink:	JLINK_CORESIGHT_WriteAPDPReg(DP reg 0x02, 0x00000000)
+. . . . . . nRF52_write_debug_port_register:	JLink:	  returns -1
+. . . . . . nRF52_write_debug_port_register:	JLink:	 (0001ms, 0521ms total)  
+. . . . . . nRF52_write_debug_port_register:	JLinkARM.dll CORESIGHT_WriteAPDPReg returned error -1.
+
+. . . . . nRF52_power_debug_and_system_regions:	JLinkARM.dll CORESIGHT_WriteAPDPReg returned error -102.
+
+nRF_close_dll
+. nRF52_close_dll
+. . nRF52_is_connected_to_emu
+. . nRF52_is_connected_to_emu:	JLink:	TB3771740 000:521 
+. . nRF52_is_connected_to_emu:	JLink:	JLINK_IsOpen()
+. . nRF52_is_connected_to_emu:	JLink:	  returns 0x01
+. . nRF52_is_connected_to_emu:	JLink:	 (0000ms, 0521ms total)  
+. . nRF52_disconnect_from_emu
+. . . nRF52_is_connected_to_device
+. . . nRF52_is_connected_to_device:	JLink:	TB3771740 000:521 
+. . . nRF52_is_connected_to_device:	JLink:	JLINK_IsConnected()
+. . . nRF52_is_connected_to_device:	JLink:	  returns FALSE
+. . . nRF52_is_connected_to_device:	JLink:	 (0001ms, 0522ms total)  
+. . . nRF52_unpower_debug_and_system_regions
+. . nRF52_disconnect_from_emu:	JLink:	TB3771740 000:526 
+. . nRF52_disconnect_from_emu:	JLink:	JLINK_Close()

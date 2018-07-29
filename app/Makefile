@@ -1,12 +1,12 @@
-PROJECT_NAME     := ant_hrm_rx_pca10040_s212
-TARGETS          := nrf52832_xxaa
+PROJECT_NAME     := SmartFan Controller
+TARGETS          := smart_fan_xxaa
 OUTPUT_DIRECTORY := _build
 
-SDK_ROOT := ..
-PROJ_DIR := ../../..
+SDK_ROOT := /home/noel/Dev/SDK/nRF5_SDK_15.0.0_a53641a
+PROJ_DIR := .
 
-$(OUTPUT_DIRECTORY)/nrf52832_xxaa.out: \
-  LINKER_SCRIPT  := ant_hrm_rx_gcc_nrf52.ld
+$(OUTPUT_DIRECTORY)/smart_fan_xxaa.out: \
+  LINKER_SCRIPT  := smart_fan_gcc_nrf52.ld
 
 # Source files common to all targets
 SRC_FILES += \
@@ -54,7 +54,11 @@ SRC_FILES += \
   $(SDK_ROOT)/components/ant/ant_state_indicator/ant_state_indicator.c \
   $(SDK_ROOT)/components/libraries/bsp/bsp.c \
   $(SDK_ROOT)/components/libraries/bsp/bsp_btn_ant.c \
-  $(PROJ_DIR)/main.c \
+
+SRC_FILES += \
+  $(PROJ_DIR)/src/main.c \
+  
+SRC_FILES += \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT.c \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT_Syscalls_GCC.c \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT_printf.c \
@@ -73,7 +77,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/ant/ant_profiles/ant_hrm \
   $(SDK_ROOT)/components/ant/ant_profiles/ant_hrm/simulator \
   $(SDK_ROOT)/components/libraries/scheduler \
-  ../config \
+  $(PROJ_DIR)/include \
   $(SDK_ROOT)/components/libraries/experimental_section_vars \
   $(SDK_ROOT)/modules/nrfx/mdk \
   $(SDK_ROOT)/components/ant/ant_profiles/ant_hrm/utils \
@@ -110,7 +114,9 @@ INC_FOLDERS += \
 LIB_FILES += \
 
 # Optimization flags
-OPT = -O3 -g3
+# Debug
+OPT = -O0 -g3 -DDEBUG
+
 # Uncomment the line below to enable link time optimization
 #OPT += -flto
 
@@ -120,9 +126,9 @@ CFLAGS += -DBOARD_PCA10040
 CFLAGS += -DCONFIG_GPIO_AS_PINRESET
 CFLAGS += -DFLOAT_ABI_HARD
 CFLAGS += -DNRF52
-CFLAGS += -DNRF52832_XXAA
+CFLAGS += -Dsmart_fan_XXAA
 CFLAGS += -DNRF52_PAN_74
-CFLAGS += -DS212
+CFLAGS += -DS332
 CFLAGS += -DSOFTDEVICE_PRESENT
 CFLAGS += -DSWI_DISABLE0
 CFLAGS += -mcpu=cortex-m4
@@ -145,9 +151,9 @@ ASMFLAGS += -DBOARD_PCA10040
 ASMFLAGS += -DCONFIG_GPIO_AS_PINRESET
 ASMFLAGS += -DFLOAT_ABI_HARD
 ASMFLAGS += -DNRF52
-ASMFLAGS += -DNRF52832_XXAA
+ASMFLAGS += -Dsmart_fan_XXAA
 ASMFLAGS += -DNRF52_PAN_74
-ASMFLAGS += -DS212
+ASMFLAGS += -DS332
 ASMFLAGS += -DSOFTDEVICE_PRESENT
 ASMFLAGS += -DSWI_DISABLE0
 
@@ -161,30 +167,29 @@ LDFLAGS += -Wl,--gc-sections
 # use newlib in nano version
 LDFLAGS += --specs=nano.specs
 
-nrf52832_xxaa: CFLAGS += -D__HEAP_SIZE=8192
-nrf52832_xxaa: CFLAGS += -D__STACK_SIZE=8192
-nrf52832_xxaa: ASMFLAGS += -D__HEAP_SIZE=8192
-nrf52832_xxaa: ASMFLAGS += -D__STACK_SIZE=8192
+smart_fan_xxaa: CFLAGS += -D__HEAP_SIZE=8192
+smart_fan_xxaa: CFLAGS += -D__STACK_SIZE=8192
+smart_fan_xxaa: ASMFLAGS += -D__HEAP_SIZE=8192
+smart_fan_xxaa: ASMFLAGS += -D__STACK_SIZE=8192
 
 # Add standard libraries at the very end of the linker input, after all objects
 # that may need symbols provided by these libraries.
 LIB_FILES += -lc -lnosys -lm
 
-
 .PHONY: default help
 
 # Default target - first one defined
-default: nrf52832_xxaa
+default: smart_fan_xxaa
 
 # Print all targets that can be built
 help:
 	@echo following targets are available:
-	@echo		nrf52832_xxaa
+	@echo		smart_fan_xxaa
+	@echo		softdevice_merge - Merge output file and softdevice
 	@echo		sdk_config - starting external tool for editing sdk_config.h
 	@echo		flash      - flashing binary
 
 TEMPLATE_PATH := $(SDK_ROOT)/components/toolchain/gcc
-
 
 include $(TEMPLATE_PATH)/Makefile.common
 
@@ -192,8 +197,13 @@ $(foreach target, $(TARGETS), $(call define_target, $(target)))
 
 .PHONY: flash erase
 
+# Merge the output file and the softdevice
+softdevice_merge: $(OUTPUT_DIRECTORY)/smart_fan_xxaa.hex
+	@echo Merging: $<
+	$(SDK_ROOT)/tools/mergehex/mergehex -m $(SDK_ROOT)/softdevices/s332/ANT_s332_nrf52_5.0.0.hex $< -o $(OUTPUT_DIRECTORY)/out.hex
+
 # Flash the program
-flash: $(OUTPUT_DIRECTORY)/nrf52832_xxaa.hex
+flash: $(OUTPUT_DIRECTORY)/out.hex
 	@echo Flashing: $<
 	nrfjprog -f nrf52 --program $< --sectorerase
 	nrfjprog -f nrf52 --reset
