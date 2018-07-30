@@ -3,7 +3,7 @@
 import time
 import paho.mqtt.client as paho
 
-broker="BROKER_IP"
+broker="YOUR_IP"
 client = None
 
 #define callback
