@@ -33,7 +33,6 @@ void new_fan_event(fan_event event) {
         return;
     }
 
-    NRF_LOG_INFO("New Fan event");
     if(event == STEP_UP_EVENT) {
         step_fan_up();
     }
