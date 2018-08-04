@@ -1,1 +1,3 @@
-app/_build/
+app/build
+*.class
+
