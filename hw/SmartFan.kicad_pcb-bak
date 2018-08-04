@@ -2,11 +2,11 @@
 
   (general
     (links 95)
-    (no_connects 2)
+    (no_connects 3)
     (area 91.924999 59.924999 203.075001 122.575001)
     (thickness 1.6)
     (drawings 6)
-    (tracks 360)
+    (tracks 357)
     (zones 0)
     (modules 40)
     (nets 74)
@@ -263,7 +263,7 @@
   )
 
   (net_class PWR ""
-    (clearance 0.1)
+    (clearance 0.3)
     (trace_width 0.325)
     (via_dia 0.6)
     (via_drill 0.4)
@@ -1961,9 +1961,6 @@
   (segment (start 109.225 82.275) (end 102.5 89) (width 0.325) (layer F.Cu) (net 1) (tstamp 5B628699))
   (segment (start 97.25 89) (end 99.79 89) (width 0.325) (layer F.Cu) (net 1))
   (segment (start 118.05 105.55) (end 118.05 106.55) (width 0.325) (layer F.Cu) (net 1) (tstamp 5B628770) (status 20))
-  (segment (start 117.5 107.5) (end 117.5 108) (width 0.325) (layer F.Cu) (net 2))
-  (segment (start 116.4 109.1) (end 116.4 115.35) (width 0.325) (layer F.Cu) (net 2) (tstamp 5B628A9C))
-  (segment (start 117.5 108) (end 116.4 109.1) (width 0.325) (layer F.Cu) (net 2) (tstamp 5B628A9B))
   (segment (start 119.15 106.55) (end 121.24 106.55) (width 0.325) (layer F.Cu) (net 2) (status 10))
   (via (at 121.24 106.54) (size 0.6) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (segment (start 121.24 106.55) (end 121.24 106.54) (width 0.325) (layer F.Cu) (net 2) (tstamp 5B6289B3))

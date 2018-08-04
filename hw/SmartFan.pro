@@ -1,4 +1,4 @@
-update=Sun 15 Jul 2018 04:02:22 PM EDT
+update=Wed 01 Aug 2018 07:17:20 PM EDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -211,3 +211,5 @@ LibName179=/home/noel/.kicad/libraries/esp32-devkitc
 LibName180=switch_dpdt
 LibName181=switch_spdt
 LibName182=sw_push_small_h
+LibName183=Relay
+LibName184=MDBT42Q
