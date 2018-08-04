@@ -11,6 +11,11 @@
 #include "nrf_log.h"
 #include "hr_ctrl.h"
 
+// Static function prototypes
+static void ant_hrm_evt_handler(ant_hrm_profile_t * p_profile, ant_hrm_evt_t event);
+static void softdevice_setup(void);
+static void profile_setup(void);
+
 HRM_DISP_CHANNEL_CONFIG_DEF(m_ant_hrm,
                             HRM_CHANNEL_NUM,
                             CHAN_ID_TRANS_TYPE,

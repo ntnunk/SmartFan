@@ -29,6 +29,7 @@ int main(void) {
 
     utils_setup();
     ant_utils_setup();
+    fan_ctrl_setup();
     state_tmr_setup();
 
     while (true) {
