@@ -118,7 +118,7 @@
 // <e> ANT_HRM_LOG_ENABLED - Enables general logging in the module.
 //==========================================================
 #ifndef ANT_HRM_LOG_ENABLED
-#define ANT_HRM_LOG_ENABLED 1
+#define ANT_HRM_LOG_ENABLED 0
 #endif
 // <o> ANT_HRM_LOG_LEVEL  - Default Severity level
  
@@ -129,7 +129,7 @@
 // <4=> Debug 
 
 #ifndef ANT_HRM_LOG_LEVEL
-#define ANT_HRM_LOG_LEVEL 3
+#define ANT_HRM_LOG_LEVEL 2
 #endif
 
 // <o> ANT_HRM_INFO_COLOR  - ANSI escape code prefix.
@@ -153,7 +153,7 @@
 // <e> ANT_HRM_PAGE_0_LOG_ENABLED - Enables logging of HRM page 0 in the module.
 //==========================================================
 #ifndef ANT_HRM_PAGE_0_LOG_ENABLED
-#define ANT_HRM_PAGE_0_LOG_ENABLED 1
+#define ANT_HRM_PAGE_0_LOG_ENABLED 0
 #endif
 // <o> ANT_HRM_PAGE_0_LOG_LEVEL  - Default Severity level
  
@@ -188,7 +188,7 @@
 // <e> ANT_HRM_PAGE_1_LOG_ENABLED - Enables logging of HRM page 1 in the module.
 //==========================================================
 #ifndef ANT_HRM_PAGE_1_LOG_ENABLED
-#define ANT_HRM_PAGE_1_LOG_ENABLED 1
+#define ANT_HRM_PAGE_1_LOG_ENABLED 0
 #endif
 // <o> ANT_HRM_PAGE_1_LOG_LEVEL  - Default Severity level
  
@@ -223,7 +223,7 @@
 // <e> ANT_HRM_PAGE_2_LOG_ENABLED - Enables logging of HRM page 2 in the module.
 //==========================================================
 #ifndef ANT_HRM_PAGE_2_LOG_ENABLED
-#define ANT_HRM_PAGE_2_LOG_ENABLED 1
+#define ANT_HRM_PAGE_2_LOG_ENABLED 0
 #endif
 // <o> ANT_HRM_PAGE_2_LOG_LEVEL  - Default Severity level
  
@@ -258,7 +258,7 @@
 // <e> ANT_HRM_PAGE_3_LOG_ENABLED - Enables logging of HRM page 3 in the module.
 //==========================================================
 #ifndef ANT_HRM_PAGE_3_LOG_ENABLED
-#define ANT_HRM_PAGE_3_LOG_ENABLED 1
+#define ANT_HRM_PAGE_3_LOG_ENABLED 0
 #endif
 // <o> ANT_HRM_PAGE_3_LOG_LEVEL  - Default Severity level
  
@@ -293,7 +293,7 @@
 // <e> ANT_HRM_PAGE_4_LOG_ENABLED - Enables logging of HRM page 4 in the module.
 //==========================================================
 #ifndef ANT_HRM_PAGE_4_LOG_ENABLED
-#define ANT_HRM_PAGE_4_LOG_ENABLED 1
+#define ANT_HRM_PAGE_4_LOG_ENABLED 0
 #endif
 // <o> ANT_HRM_PAGE_4_LOG_LEVEL  - Default Severity level
  
@@ -1240,7 +1240,7 @@
 // <e> NRF_LOG_BACKEND_RTT_ENABLED - nrf_log_backend_rtt - Log RTT backend
 //==========================================================
 #ifndef NRF_LOG_BACKEND_RTT_ENABLED
-#define NRF_LOG_BACKEND_RTT_ENABLED 0
+#define NRF_LOG_BACKEND_RTT_ENABLED0
 #endif
 // <o> NRF_LOG_BACKEND_RTT_TEMP_BUFFER_SIZE - Size of buffer for partially processed strings. 
 // <i> Size of the buffer is a trade-off between RAM usage and processing.
@@ -1249,7 +1249,7 @@
 // <i> longer one will be fragmented.
 
 #ifndef NRF_LOG_BACKEND_RTT_TEMP_BUFFER_SIZE
-#define NRF_LOG_BACKEND_RTT_TEMP_BUFFER_SIZE 64
+#define NRF_LOG_BACKEND_RTT_TEMP_BUFFER_SIZE 0
 #endif
 
 // <o> NRF_LOG_BACKEND_RTT_TX_RETRY_DELAY_MS - Period before retrying writing to RTT 

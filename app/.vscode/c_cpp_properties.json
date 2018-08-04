@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "${default}",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/hal",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_profiles/ant_hrm",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/delay",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/common"
+            ]
+        }
+    ],
+    "version": 4
+}
