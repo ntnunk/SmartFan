@@ -1,4 +1,4 @@
-update=Wed 01 Aug 2018 07:17:20 PM EDT
+update=Sun 05 Aug 2018 09:22:58 PM EDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=/home/noel/.kicad/libraries/ESP32-kiCAD-Footprints/ESP32-Footprints;/home/noel/.kicad/libraries/kicad-library/library;/home/noel/.kicad/libraries
+LibDir=/home/noel/.kicad/libraries/kicad-library/library;/home/noel/.kicad/libraries
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -213,3 +213,5 @@ LibName181=switch_spdt
 LibName182=sw_push_small_h
 LibName183=Relay
 LibName184=MDBT42Q
+LibName185=640445-4
+LibName186=640445-2
