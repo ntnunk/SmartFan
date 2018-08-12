@@ -9,7 +9,14 @@
                 "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/hal",
                 "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_profiles/ant_hrm",
                 "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/delay",
-                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/common"
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/common",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/softdevice/s332/headers",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ble/common",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/serialization/connectivity",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/libraries/fds",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ble/peer_manager",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ble/nrf_ble_gatt",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ble/ble_advertising"
             ]
         }
     ],

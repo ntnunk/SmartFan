@@ -51,12 +51,12 @@ static void ant_hrm_evt_handler(ant_hrm_profile_t * p_profile, ant_hrm_evt_t eve
  * @details Initializes the SoftDevice and the ANT event interrupt.
  */
 static void softdevice_setup(void) {
-    ret_code_t err_code = nrf_sdh_enable_request();
-    APP_ERROR_CHECK(err_code);
+    //ret_code_t err_code = nrf_sdh_enable_request();
+    //APP_ERROR_CHECK(err_code);
 
     ASSERT(nrf_sdh_is_enabled());
 
-    err_code = nrf_sdh_ant_enable();
+    ret_code_t err_code = nrf_sdh_ant_enable();
     APP_ERROR_CHECK(err_code);
 
     err_code = ant_plus_key_set(ANTPLUS_NETWORK_NUM);

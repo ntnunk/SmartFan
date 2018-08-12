@@ -35,7 +35,9 @@ void utils_setup(void) {
 
     err_code = app_timer_init();
     APP_ERROR_CHECK(err_code);
+    NRF_LOG_INFO("Timer Setup complete");
 
     err_code = bsp_init(0, bsp_event_handler);
     APP_ERROR_CHECK(err_code);
+    NRF_LOG_INFO("BSP Setup complete");
 }
