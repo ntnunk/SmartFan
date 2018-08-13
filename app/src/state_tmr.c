@@ -1,4 +1,5 @@
 #include "nrf_log.h"
+#include "nrf_log_ctrl.h"
 #include "app_timer.h"
 #include "drivers_nrf/clock/nrf_drv_clock.h"
 
@@ -85,12 +86,15 @@ void stop_debounce_timers() {
 }
 
 void start_ble_update_timer() {
+    NRF_LOG_INFO("Starting BLE Update timer");
+    NRF_LOG_FLUSH();
     ret_code_t err_code = app_timer_start(ble_update_id, APP_TIMER_TICKS(BLE_UPDATE_MS), NULL);
     // Write the fan speed
     APP_ERROR_CHECK(err_code);
 }
 
 void stop_ble_update_timer() {
+    NRF_LOG_INFO("Stopping BLE update timer");
     ret_code_t err_code = app_timer_stop(ble_update_id);
     APP_ERROR_CHECK(err_code);
 }

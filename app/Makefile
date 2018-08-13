@@ -87,6 +87,7 @@ SRC_FILES += \
   $(SDK_ROOT)/components/ble/peer_manager/security_manager.c \
   
 SRC_FILES += \
+  $(SRC_DIR)/ble_main.c \
   $(SRC_DIR)/ble_fan_svc.c \
   $(SRC_DIR)/state_tmr.c \
   $(SRC_DIR)/fan_ctrl.c \

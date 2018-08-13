@@ -7,7 +7,7 @@
 #include "nordic_common.h"
 
 #include "utils.h"
-#include "ble_fan_svc.h"
+#include "ble_main.h"
 #include "ant.h"
 #include "fan_ctrl.h"
 #include "state_tmr.h"

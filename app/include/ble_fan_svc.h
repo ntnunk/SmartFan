@@ -6,7 +6,6 @@
 #include "ble.h"
 #include "ble_srv_common.h"
 
-
 /**
  * @brief Macro defining a ble_fan_svc instance
  * 
@@ -70,7 +69,6 @@ struct ble_fan_s {
     uint8_t                         uuid_type;
 };
 
-
 /**
  * @brief Function for initializing the Custom Service.
  *
@@ -118,13 +116,8 @@ uint32_t ble_fan_mode_value_update(ble_fan_t * p_fan, uint8_t fan_mode_value);
  */
 void update_fan_speed(uint8_t speed);
 
-void advertising_init(void);
-void peer_manager_init(void);
-void ble_stack_init(void);
-void conn_params_init(void);
-void services_init(void);
-void gap_params_init(void);
-void gatt_init(void);
-void advertising_start(void);
+
+
+void on_fan_evt(ble_fan_t * p_fan_service, ble_fan_evt_t * p_evt);
 
 #endif // _BLE_FAN_SVC_H_
