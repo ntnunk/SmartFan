@@ -23,6 +23,8 @@ uint32_t ble_fan_init(ble_fan_t * p_fan, const ble_fan_init_t * p_fan_init) {
 
     // Initialize the service structure
     p_fan->evt_handler = p_fan_init->evt_handler;
+    p_fan->mode_evt_handler = p_fan_init->mode_evt_handler;
+    p_fan->speed_evt_handler = p_fan_init->speed_evt_handler;
     p_fan->conn_handle = BLE_CONN_HANDLE_INVALID;
 
     // Add the Fan Service UUID
@@ -73,6 +75,8 @@ static uint32_t fan_char_add(ble_fan_t * p_fan, const ble_fan_init_t * p_fan_ini
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&cccd_md.read_perm);
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&cccd_md.write_perm);
 
+    cccd_md.wr_auth = 0;
+    cccd_md.rd_auth = 0;
     cccd_md.vloc = BLE_GATTS_VLOC_STACK;
 
     // Initialize the characteristic metadata structure
@@ -106,7 +110,11 @@ static uint32_t fan_char_add(ble_fan_t * p_fan, const ble_fan_init_t * p_fan_ini
     attr_char_value.init_offs = 0;
     attr_char_value.max_len   = sizeof(uint8_t);
 
-    err_code = sd_ble_gatts_characteristic_add(p_fan->service_handle, &char_md, &attr_char_value, &p_fan->fan_value_handles);
+    if(CHAR_UUID == FAN_MODE_CHAR_UUID)
+        err_code = sd_ble_gatts_characteristic_add(p_fan->service_handle, &char_md, &attr_char_value, &p_fan->fan_mode_handles);
+    else if(CHAR_UUID == FAN_SPEED_CHAR_UUID)
+        err_code = sd_ble_gatts_characteristic_add(p_fan->service_handle, &char_md, &attr_char_value, &p_fan->fan_speed_handles);
+
     if(err_code != NRF_SUCCESS) {
         return err_code;
     }
@@ -155,32 +163,37 @@ static void on_fan_disconnect(ble_fan_t * p_fan, ble_evt_t const * p_ble_evt) {
 
     NRF_LOG_INFO("Disconnect event");
     UNUSED_PARAMETER(p_ble_evt);
+    ble_fan_evt_t evt;
+    evt.evt_type = BLE_FAN_EVT_DISCONNECTED;
+    p_fan->evt_handler(p_fan, &evt);
     p_fan->conn_handle = BLE_CONN_HANDLE_INVALID;
 }
 
 static void on_fan_write(ble_fan_t * p_fan, ble_evt_t const * p_ble_evt) {
     NRF_LOG_INFO("on_fan_write()");
     ble_gatts_evt_write_t const * p_evt_write = &p_ble_evt->evt.gatts_evt.params.write;
-    
-    // Check if the handle passed with the event matches the Custom Value Characteristic handle.
-    if ((p_evt_write->handle == p_fan->fan_value_handles.value_handle) && (p_evt_write->len == 2)) {
-        // CCCD written, call application event handler
-        if(p_fan->evt_handler != NULL) {
-            ble_fan_evt_t evt;
-            if(ble_srv_is_notification_enabled(p_evt_write->data)) {
-                evt.evt_type = BLE_FAN_EVT_NOTIFICATION_ENABLED;
-            }
-            else {
-                evt.evt_type = BLE_FAN_EVT_NOTIFICATION_DISABLED;
-            }
-            p_fan->evt_handler(p_fan, &evt);
+
+    uint8_t evt_type = 0;
+    if(p_evt_write->handle == p_fan->fan_mode_handles.cccd_handle)
+        evt_type = 1;
+    else if(p_evt_write->handle == p_fan->fan_speed_handles.cccd_handle)
+        evt_type = 2;
+
+    if(p_evt_write->len == 2) {
+        ble_fan_evt_t evt;
+        if(ble_srv_is_notification_enabled(p_evt_write->data)) {
+            evt.evt_type = BLE_FAN_EVT_NOTIFICATION_ENABLED;
+        }
+        else {
+            evt.evt_type = BLE_FAN_EVT_NOTIFICATION_DISABLED;
+        }
+        if(evt_type == 1 && p_fan->mode_evt_handler != NULL) {
+            p_fan->mode_evt_handler(p_fan, &evt);
+        }
+        else if(evt_type == 2 && p_fan->speed_evt_handler != NULL) {
+            p_fan->speed_evt_handler(p_fan, &evt);
         }
     }
-}
-
-void update_fan_speed(uint8_t speed) {
-   //ret_code_t err_code = ble_fan_mode_value_update(&m_fan, speed);
-   //APP_ERROR_CHECK(err_code);
 }
 
 uint32_t ble_fan_mode_value_update(ble_fan_t * p_fan, uint8_t fan_mode_value) {
@@ -198,7 +211,7 @@ uint32_t ble_fan_mode_value_update(ble_fan_t * p_fan, uint8_t fan_mode_value) {
     gatts_value.p_value = &fan_mode_value;
 
     // Update the database
-    err_code = sd_ble_gatts_value_set(p_fan->conn_handle, p_fan->fan_value_handles.value_handle, &gatts_value);
+    err_code = sd_ble_gatts_value_set(p_fan->conn_handle, p_fan->fan_mode_handles.value_handle, &gatts_value);
     if(err_code != NRF_SUCCESS) {
         return err_code;
     }
@@ -207,7 +220,7 @@ uint32_t ble_fan_mode_value_update(ble_fan_t * p_fan, uint8_t fan_mode_value) {
     if(p_fan->conn_handle != BLE_CONN_HANDLE_INVALID) {
         ble_gatts_hvx_params_t hvx_params;
         memset(&hvx_params, 0, sizeof(hvx_params));
-        hvx_params.handle = p_fan->fan_value_handles.value_handle;
+        hvx_params.handle = p_fan->fan_mode_handles.value_handle;
         hvx_params.type = BLE_GATT_HVX_NOTIFICATION;
         hvx_params.offset = gatts_value.offset;
         hvx_params.p_len = &gatts_value.len;
@@ -222,17 +235,59 @@ uint32_t ble_fan_mode_value_update(ble_fan_t * p_fan, uint8_t fan_mode_value) {
     return err_code;
 }
 
-/**@brief Function for handling the YYY Service events.
- * YOUR_JOB implement a service handler function depending on the event the service you are using can generate
+uint32_t ble_fan_speed_value_update(ble_fan_t * p_fan, uint8_t fan_speed_value) {
+    if(p_fan == NULL) {
+        return NRF_ERROR_NULL;
+    }
+
+    uint32_t err_code = NRF_SUCCESS;
+    ble_gatts_value_t gatts_value;
+
+    // Initialize the value struct
+    memset(&gatts_value, 0, sizeof(gatts_value));
+    gatts_value.len = sizeof(uint8_t);
+    gatts_value.offset = 0;
+    gatts_value.p_value = &fan_speed_value;
+
+    // Update the database
+    err_code = sd_ble_gatts_value_set(p_fan->conn_handle, p_fan->fan_speed_handles.value_handle, &gatts_value);
+    if(err_code != NRF_SUCCESS) {
+        return err_code;
+    }
+
+    // Send value if connected and notifying
+    if(p_fan->conn_handle != BLE_CONN_HANDLE_INVALID) {
+        ble_gatts_hvx_params_t hvx_params;
+        memset(&hvx_params, 0, sizeof(hvx_params));
+        hvx_params.handle = p_fan->fan_speed_handles.value_handle;
+        hvx_params.type = BLE_GATT_HVX_NOTIFICATION;
+        hvx_params.offset = gatts_value.offset;
+        hvx_params.p_len = &gatts_value.len;
+        hvx_params.p_data = gatts_value.p_value;
+        
+        err_code = sd_ble_gatts_hvx(p_fan->conn_handle, &hvx_params);
+    }
+    else {
+        err_code = NRF_ERROR_INVALID_STATE;
+    }
+
+    if(err_code != NRF_SUCCESS) {
+        return err_code;
+    }
+
+    return NRF_SUCCESS;
+}
+/**
+ * @brief Function for handling the YYY Service events.
  *
- * @details This function will be called for all YY Service events which are passed to
+ * @details This function will be called for all Fan Service events which are passed to
  *          the application.
  *
- * @param[in]   p_yy_service   YY Service structure.
- * @param[in]   p_evt          Event received from the YY Service.
+ * @param[in]   ble_fan_t  Pointer to a ble_fan_t structure 
+ * @param[in]   p_evt      Event received from the Fan Service.
  *
  */
-void on_fan_evt(ble_fan_t * p_fan_service, ble_fan_evt_t * p_evt) {
+void on_fan_evt(ble_fan_t * p_fan, ble_fan_evt_t * p_evt) {
     switch (p_evt->evt_type) {
         case BLE_FAN_EVT_NOTIFICATION_ENABLED:
             NRF_LOG_INFO("on_fan_evt()->Notification enabled");
@@ -250,6 +305,36 @@ void on_fan_evt(ble_fan_t * p_fan_service, ble_fan_evt_t * p_evt) {
             break;
         default:
             // No implementation needed
+            break;
+    }
+}
+
+void on_fan_mode_evt(ble_fan_t * p_fan, ble_fan_evt_t * p_evt) {
+    switch(p_evt->evt_type) {
+        case BLE_FAN_EVT_NOTIFICATION_ENABLED:
+            NRF_LOG_INFO("on_fan_mode_evt()->Notification enabled");
+            break;
+        case BLE_FAN_EVT_NOTIFICATION_DISABLED:
+            NRF_LOG_INFO("on_fan_mode_evt()->Notification disabled");
+            break;
+        default:
+            // No implementation needed
+            break;
+    }
+}
+
+void on_fan_speed_evt(ble_fan_t * p_fan, ble_fan_evt_t * p_evt) {
+    switch(p_evt->evt_type) {
+        case BLE_FAN_EVT_NOTIFICATION_ENABLED:
+            NRF_LOG_INFO("on_fan_speed_evt()->Notification enabled");
+            start_ble_update_timer();
+            break;
+        case BLE_FAN_EVT_NOTIFICATION_DISABLED:
+            NRF_LOG_INFO("on_fan_speed_evt()->Notification disabled");
+            stop_ble_update_timer();
+            break;
+        default:
+            // no implementation needed
             break;
     }
 }

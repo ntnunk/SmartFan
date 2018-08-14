@@ -4,7 +4,7 @@
 #include "drivers_nrf/clock/nrf_drv_clock.h"
 
 #include "fan_ctrl.h"
-#include "ble_fan_svc.h"
+#include "ble_main.h"
 
 #define STEP_UP_MS 10000
 #define STEP_DN_MS 20000
@@ -17,6 +17,7 @@ static void step_dn_dbnc_tmr_stop();
 
 static bool step_up_dbnc_tmr_running = false;
 static bool step_dn_dbnc_tmr_running = false;
+static bool ble_update_tmr_running = false;
 
 APP_TIMER_DEF(step_up_dbnc_id);
 APP_TIMER_DEF(step_dn_dbnc_id);
@@ -35,8 +36,8 @@ static void step_dn_dbnc(void * p_context) {
 }
 
 static void ble_update(void * p_context) {
-    fan_state state = get_speed();
-    update_fan_speed((uint8_t)state);
+    update_fan_speed(get_speed());
+    update_fan_mode(get_mode());
 }
 
 static void step_up_dbnc_tmr_start() {
@@ -86,17 +87,21 @@ void stop_debounce_timers() {
 }
 
 void start_ble_update_timer() {
+    if(ble_update_tmr_running)
+        return;
     NRF_LOG_INFO("Starting BLE Update timer");
-    NRF_LOG_FLUSH();
     ret_code_t err_code = app_timer_start(ble_update_id, APP_TIMER_TICKS(BLE_UPDATE_MS), NULL);
-    // Write the fan speed
     APP_ERROR_CHECK(err_code);
+    ble_update_tmr_running = true;
 }
 
 void stop_ble_update_timer() {
+    if(!ble_update_tmr_running)
+        return;
     NRF_LOG_INFO("Stopping BLE update timer");
     ret_code_t err_code = app_timer_stop(ble_update_id);
     APP_ERROR_CHECK(err_code);
+    ble_update_tmr_running = false;
 }
 
 void state_tmr_setup() {

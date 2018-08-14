@@ -14,7 +14,8 @@ static void reset_relays();
 static void step_fan_up();
 static void step_fan_dn();
 
-static fan_state state = FAN_SPD_OFF;
+static fan_mode_t mode = FAN_MODE_MAN;
+static fan_state_t state = FAN_SPD_OFF;
 static bool step_up_changes_locked = false;
 static bool step_dn_changes_locked = false;
 
@@ -22,11 +23,15 @@ void fan_ctrl_setup() {
     nrf_gpio_range_cfg_output(LOW_PIN, HI_PIN);
 }
 
-fan_state get_speed(void) {
+fan_mode_t get_mode(void) {
+    return mode;
+}
+
+fan_state_t get_speed(void) {
     return state;
 }
 
-void new_fan_event(fan_event event) {
+void new_fan_event(fan_event_t event) {
     if(!check_state()) {
         // Undefined state. Shut it down...
         reset_relays();

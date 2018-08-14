@@ -23,6 +23,7 @@
 
 #include "ble_main.h"
 #include "ble_fan_svc.h"
+#include "fan_ctrl.h"
 #include "state_tmr.h"
 
 #define APP_FEATURE_NOT_SUPPORTED       BLE_GATT_STATUS_ATTERR_APP_BEGIN + 2    /**< Reply when unsupported features are requested. */
@@ -78,12 +79,47 @@ static ble_uuid_t m_adv_uuids[] =                                               
  * @param[in] line_num   Line number of the failing ASSERT call.
  * @param[in] file_name  File name of the failing ASSERT call.
  */
-void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
-{
+void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name) {
     app_error_handler(DEAD_BEEF, line_num, p_file_name);
 }
 
+/**
+ * @brief update fan speed characteristic
+ * 
+ * @param[in] speed uint8_t value representing new speed (0-3)
+ */
+void update_fan_speed(fan_state_t speed) {
+    switch(speed) {
+        case FAN_SPD_OFF:
+        case FAN_SPD_LO:
+        case FAN_SPD_MED:
+        case FAN_SPD_HI:
+            break;
+        default:
+            speed = FAN_SPD_OFF;
+    }
+
+    ret_code_t err_code = ble_fan_speed_value_update(&m_fan, (uint8_t)speed);
+    APP_ERROR_CHECK(err_code);
+}
+
+void update_fan_mode(fan_mode_t mode) {
+    switch(mode) {
+        case FAN_MODE_MAN:
+        case FAN_MODE_HR:
+        case FAN_MODE_PWR:
+        case FAN_MODE_SPD:
+            break;
+        default:
+            mode = FAN_MODE_MAN;
+    }
+    
+   ret_code_t err_code = ble_fan_mode_value_update(&m_fan, (uint8_t)mode);
+   APP_ERROR_CHECK(err_code);
+}
+
 /**@brief Function for handling Peer Manager events.
+ * 
  *
  * @param[in] p_evt  Peer Manager event.
  */
@@ -223,6 +259,8 @@ void services_init(void) {
     // Initialize Fan Service structure to 0
     memset(&fan_init, 0, sizeof(fan_init));
     fan_init.evt_handler = on_fan_evt;
+    fan_init.mode_evt_handler = on_fan_mode_evt;
+    fan_init.speed_evt_handler = on_fan_speed_evt;
 
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&fan_init.custom_value_char_attr_md.cccd_write_perm);
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&fan_init.custom_value_char_attr_md.read_perm);
@@ -443,42 +481,6 @@ static void delete_bonds(void) {
     err_code = pm_peers_delete();
     APP_ERROR_CHECK(err_code);
 }
-
-/**@brief Function for handling events from the BSP module.
- *
- * @param[in]   event   Event generated when button is pressed.
- *
-static void bsp_event_handler(bsp_event_t event) {
-    ret_code_t err_code;
-
-    switch (event) {
-        case BSP_EVENT_SLEEP:
-            //sleep_mode_enter();
-            break; // BSP_EVENT_SLEEP
-
-        case BSP_EVENT_DISCONNECT:
-            err_code = sd_ble_gap_disconnect(m_conn_handle,
-                                             BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
-            if (err_code != NRF_ERROR_INVALID_STATE) {
-                APP_ERROR_CHECK(err_code);
-            }
-            break; // BSP_EVENT_DISCONNECT
-
-        case BSP_EVENT_WHITELIST_OFF:
-            if (m_conn_handle == BLE_CONN_HANDLE_INVALID)
-            {
-                err_code = ble_advertising_restart_without_whitelist(&m_advertising);
-                if (err_code != NRF_ERROR_INVALID_STATE) {
-                    APP_ERROR_CHECK(err_code);
-                }
-            }
-            break; // BSP_EVENT_KEY_0
-
-        default:
-            break;
-    }
-}
-*/
 
 /**@brief Function for initializing the Advertising functionality.
  */

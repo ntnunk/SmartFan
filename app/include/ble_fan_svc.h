@@ -25,7 +25,7 @@ NRF_SDH_BLE_OBSERVER(_name ## _obs,                 \
     0xb3, 0xa6, 0x57, 0xb0, \
     0xcf, 0x4d, 0xa4, 0x3b, \
     0x79, 0xcf, 0x8a, 0x50  \
-}
+}  \
 
 #define FAN_SERVICE_UUID        0x6900
 #define FAN_MODE_CHAR_UUID      0x6901
@@ -54,6 +54,8 @@ typedef void (*ble_fan_evt_handler_t) (ble_fan_t * p_fan, ble_fan_evt_t * p_evt)
  */
 typedef struct {
     ble_fan_evt_handler_t           evt_handler;
+    ble_fan_evt_handler_t           mode_evt_handler;
+    ble_fan_evt_handler_t           speed_evt_handler;
     uint8_t                         initial_custom_value;
     ble_srv_cccd_security_mode_t    custom_value_char_attr_md;
 } ble_fan_init_t;
@@ -62,9 +64,12 @@ typedef struct {
  * @brief Fan Service structure. This contains various status information for the service.
  */
 struct ble_fan_s {
-    ble_fan_evt_handler_t           evt_handler;
+    ble_fan_evt_handler_t           evt_handler;            // Event handler for anything not mode or speed
+    ble_fan_evt_handler_t           mode_evt_handler;       // Event handler for the mode event
+    ble_fan_evt_handler_t           speed_evt_handler;      // Event handler for the speed event
     uint16_t                        service_handle;         // Handle of Fan Service (as provided by BLE stack)
-    ble_gatts_char_handles_t        fan_value_handles;      // Handles related to Custom Value characteristic
+    ble_gatts_char_handles_t        fan_mode_handles;       // Handles related to fan mode characteristic
+    ble_gatts_char_handles_t        fan_speed_handles;      // Handles related to the fan speed characteristic
     uint16_t                        conn_handle;            // Handle of current connection (as provided by BLE stack. BLE_CONN_HANDLE_INVALID if no connection)
     uint8_t                         uuid_type;
 };
@@ -101,23 +106,28 @@ void ble_fan_ble_evt( ble_evt_t const * p_ble_evt, void * p_context);
  *
  * @note 
  *       
- * @param[in]   p_fan          Custom Service structure.
- * @param[in]   fan_mode_value 
+ * @param[in]   p_fan           fan service structure 
+ * @param[in]   fan_mode_value  new mode value
  *
  * @return      NRF_SUCCESS on success, otherwise an error code.
  */
-
 uint32_t ble_fan_mode_value_update(ble_fan_t * p_fan, uint8_t fan_mode_value);
 
 /**
  * @brief Function for writing a new speed to the BLE stack
  * 
- * @param[in] uint8_t speed
+ * @details The application calls this function when the fan speed value should be updated. If
+ *          notification has been enabled, the fan mode characteristic is sent to the client.
+ *
+ * @param[in] p_fan             fan service structure
+ * @param[in] uint8_t speed     new speed value
  */
-void update_fan_speed(uint8_t speed);
+uint32_t ble_fan_speed_value_update(ble_fan_t * p_fan, uint8_t fan_speed_value);
 
 
+void on_fan_evt(ble_fan_t * p_fan, ble_fan_evt_t * p_evt);
+void on_fan_mode_evt(ble_fan_t * p_fan, ble_fan_evt_t * p_evt);
+void on_fan_speed_evt(ble_fan_t * p_fan, ble_fan_evt_t * p_evt);
 
-void on_fan_evt(ble_fan_t * p_fan_service, ble_fan_evt_t * p_evt);
 
 #endif // _BLE_FAN_SVC_H_
