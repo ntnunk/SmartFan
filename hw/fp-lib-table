@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "TE Connectors")(type KiCad)(uri /home/noel/.kicad/libraries)(options "")(descr ""))
+)

@@ -1,0 +1,5 @@
+app/build
+*.class
+android/SmartfanControl/app/build
+*.bak
+*.kicad_pcb-bak
