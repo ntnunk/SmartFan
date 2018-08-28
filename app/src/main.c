@@ -17,6 +17,7 @@
 #include "nrf_delay.h"
 
 #define BOARD_CUSTOM
+#define __CC_ARM
 
 // For the timer
 //#define APP_TIMER_PRESCALER     0
