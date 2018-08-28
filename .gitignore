@@ -3,3 +3,6 @@ app/build
 android/SmartfanControl/app/build
 *.bak
 *.kicad_pcb-bak
+app/.vscode/browse.vc.db
+app/.vscode/browse.vc.db-shm
+app/.vscode/browse.vc.db-wal
