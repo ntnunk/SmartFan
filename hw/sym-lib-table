@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name SmartFan-rescue)(type Legacy)(uri ${KIPRJMOD}/SmartFan-rescue.lib)(options "")(descr ""))
+  (lib (name hackaBLE)(type Legacy)(uri /home/noel/Dev/Projects/repos/SmartFan/hw/hackaBLE.lib)(options "")(descr ""))
 )
