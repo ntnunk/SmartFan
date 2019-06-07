@@ -75,6 +75,7 @@ bool step_dn_changes_allowed() {
     return !step_dn_changes_locked;
 }
 
+// Return true if the fan is running, false if not.
 static bool check_state() {
     switch(state) {
         case FAN_SPD_OFF:

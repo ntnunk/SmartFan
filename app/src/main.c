@@ -18,6 +18,7 @@
 
 #define BOARD_CUSTOM
 #define __CC_ARM
+#define DEBUG
 
 // For the timer
 //#define APP_TIMER_PRESCALER     0

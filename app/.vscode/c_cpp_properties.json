@@ -118,7 +118,10 @@
                 "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/usbd",
                 "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ble/ble_services/ble_hrs",
                 "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_key_manager",
-                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_profiles/ant_hrm"
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_profiles/ant_hrm",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_channel_config",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_profiles/ant_hrm/pages",
+                "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_state_indicator"
             ],
             "defines": [
                 "BLE_STACK_SUPPORT_REQD",
@@ -661,7 +664,10 @@
                     "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/drivers_nrf/usbd",
                     "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ble/ble_services/ble_hrs",
                     "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_key_manager",
-                    "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_profiles/ant_hrm"
+                    "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_profiles/ant_hrm",
+                    "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_channel_config",
+                    "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_profiles/ant_hrm/pages",
+                    "/home/noel/Dev/SDK/nRF5_SDK_14.2.0_17b948a/components/ant/ant_state_indicator"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "${workspaceRoot}/.vscode/browse.vc.db"

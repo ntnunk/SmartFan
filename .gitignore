@@ -6,3 +6,5 @@ android/SmartfanControl/app/build
 app/.vscode/browse.vc.db
 app/.vscode/browse.vc.db-shm
 app/.vscode/browse.vc.db-wal
+app/.vscode/ipch
+hw/*rescue*

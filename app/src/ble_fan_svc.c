@@ -75,8 +75,7 @@ static uint32_t fan_char_add(ble_fan_t * p_fan, const ble_fan_init_t * p_fan_ini
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&cccd_md.read_perm);
     BLE_GAP_CONN_SEC_MODE_SET_OPEN(&cccd_md.write_perm);
 
-    cccd_md.wr_auth = 0;
-    cccd_md.rd_auth = 0;
+    cccd_md.write_perm = p_fan_init->custom_value_char_attr_md.cccd_write_perm;
     cccd_md.vloc = BLE_GATTS_VLOC_STACK;
 
     // Initialize the characteristic metadata structure
@@ -126,6 +125,7 @@ void ble_fan_ble_evt(ble_evt_t const * p_ble_evt, void * p_context) {
     ble_fan_t * p_fan = (ble_fan_t *) p_context;
     
     if (p_fan == NULL || p_ble_evt == NULL) {
+        NRF_LOG_INFO("WTF");
         return;
     }
     
@@ -227,11 +227,14 @@ uint32_t ble_fan_mode_value_update(ble_fan_t * p_fan, uint8_t fan_mode_value) {
         hvx_params.p_data = gatts_value.p_value;
         
         err_code = sd_ble_gatts_hvx(p_fan->conn_handle, &hvx_params);
+        NRF_LOG_INFO("sde_ble_gatts_hvx() result: %x. \r\n", err_code);
     }
     else {
+        NRF_LOG_INFO("Fan Mode value update failed");
         err_code = NRF_ERROR_INVALID_STATE;
     }
 
+    NRF_LOG_INFO("Fan Mode value update succeeded");
     return err_code;
 }
 
@@ -266,19 +269,22 @@ uint32_t ble_fan_speed_value_update(ble_fan_t * p_fan, uint8_t fan_speed_value) 
         hvx_params.p_data = gatts_value.p_value;
         
         err_code = sd_ble_gatts_hvx(p_fan->conn_handle, &hvx_params);
+        NRF_LOG_INFO("sde_ble_gatts_hvx() result: %x. \r\n", err_code);
     }
     else {
         err_code = NRF_ERROR_INVALID_STATE;
     }
 
     if(err_code != NRF_SUCCESS) {
+        NRF_LOG_INFO("Fan Speed value update failed");
         return err_code;
     }
 
+    NRF_LOG_INFO("Fan Speed value update succeeded");
     return NRF_SUCCESS;
 }
 /**
- * @brief Function for handling the YYY Service events.
+ * @brief Function for handling fan service events.
  *
  * @details This function will be called for all Fan Service events which are passed to
  *          the application.

@@ -142,6 +142,7 @@ static void pm_evt_handler(pm_evt_t const * p_evt) {
         break;
 
         case PM_EVT_CONN_SEC_FAILED: {
+            NRF_LOG_INFO("PM_EVT_CONN_SEC_FAILED");
             /* Often, when securing fails, it shouldn't be restarted, for security reasons.
              * Other times, it can be restarted directly.
              * Sometimes it can be restarted, but only after changing some Security Parameters.
@@ -153,12 +154,14 @@ static void pm_evt_handler(pm_evt_t const * p_evt) {
 
         case PM_EVT_CONN_SEC_CONFIG_REQ: {
             // Reject pairing request from an already bonded peer.
+            NRF_LOG_INFO("PM_EVT_CONN_SEC_CONFIG_REQ");
             pm_conn_sec_config_t conn_sec_config = {.allow_repairing = false};
             pm_conn_sec_config_reply(p_evt->conn_handle, &conn_sec_config);
         }
         break;
 
         case PM_EVT_STORAGE_FULL: {
+            NRF_LOG_INFO("PM_EVT_STORAGE_FULL");
             // Run garbage collection on the flash.
             err_code = fds_gc();
             if (err_code == FDS_ERR_BUSY || err_code == FDS_ERR_NO_SPACE_IN_QUEUES) {
@@ -366,6 +369,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context) {
         case BLE_GATTC_EVT_TIMEOUT:
             // Disconnect on GATT Client timeout event.
             NRF_LOG_DEBUG("GATT Client Timeout.");
+            NRF_LOG_INFO("GATT Client Timeout.")
             err_code = sd_ble_gap_disconnect(p_ble_evt->evt.gattc_evt.conn_handle,
                                              BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
             APP_ERROR_CHECK(err_code);
@@ -374,17 +378,20 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context) {
         case BLE_GATTS_EVT_TIMEOUT:
             // Disconnect on GATT Server timeout event.
             NRF_LOG_DEBUG("GATT Server Timeout.");
+            NRF_LOG_INFO("GATT Server Timeout.");
             err_code = sd_ble_gap_disconnect(p_ble_evt->evt.gatts_evt.conn_handle,
                                              BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
             APP_ERROR_CHECK(err_code);
             break;
 
         case BLE_EVT_USER_MEM_REQUEST:
+            NRF_LOG_INFO("BLE_EVT_USER_MEM_REQUEST");
             err_code = sd_ble_user_mem_reply(p_ble_evt->evt.gattc_evt.conn_handle, NULL);
             APP_ERROR_CHECK(err_code);
             break;
 
         case BLE_GATTS_EVT_RW_AUTHORIZE_REQUEST: {
+            NRF_LOG_INFO("BLE_GATS_EVT_RW_AUTHORIZE_REQUEST");
             ble_gatts_evt_rw_authorize_request_t  req;
             ble_gatts_rw_authorize_reply_params_t auth_reply;
 
@@ -410,6 +417,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context) {
         break; // BLE_GATTS_EVT_RW_AUTHORIZE_REQUEST
 
         default:
+            NRF_LOG_INFO("Some other event in ble_evt_handler(): %x", p_ble_evt->header.evt_id);
             // No implementation needed.
             break;
     }
