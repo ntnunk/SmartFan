@@ -8,7 +8,7 @@ Sheet 1 1
 Title "Smart Fan Controller"
 Date "2018-09-01"
 Rev "0"
-Comp "http://www.chaticfocus.net"
+Comp "http://www.chaoticfocus.net"
 Comment1 "Smart Fan Main Board"
 Comment2 ""
 Comment3 ""
