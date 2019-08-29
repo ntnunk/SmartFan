@@ -15,548 +15,103 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L SmartFan-rescue:LTV-816S-TA1 U2
-U 1 1 5B623157
-P 13950 2650
-F 0 "U2" H 13950 2850 60  0000 C CNN
-F 1 "LTV-816S-TA1" H 14000 2450 60  0000 C CNN
-F 2 "digikey-footprints:SMD-4_4.6x7.62mm_P2.54mm" H 14150 2850 60  0001 L CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf" V 14150 2950 60  0001 L CNN
-F 4 "160-1892-1-ND" H 14150 3050 60  0001 L CNN "Digi-Key_PN"
-F 5 "LTV-816S-TA1" H 14150 3150 60  0001 L CNN "MPN"
-F 6 "Isolators" H 14150 3250 60  0001 L CNN "Category"
-F 7 "Optoisolators - Transistor, Photovoltaic Output" H 14150 3350 60  0001 L CNN "Family"
-F 8 "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf" H 14150 3450 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/lite-on-inc/LTV-816S-TA1/160-1892-1-ND/3306438" H 14150 3550 60  0001 L CNN "DK_Detail_Page"
-F 10 "OPTOISOLATR 5KV TRANSISTOR 4-SMD" H 14150 3650 60  0001 L CNN "Description"
-F 11 "Lite-On Inc." H 14150 3750 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 14150 3850 60  0001 L CNN "Status"
-	1    13950 2650
+L SmartFan-rescue:Barrel_Jack J2
+U 1 1 5B630043
+P 2050 1300
+F 0 "J2" H 2050 1510 50  0000 C CNN
+F 1 "Barrel_Jack" H 2050 1125 50  0000 C CNN
+F 2 "Connectors:BARREL_JACK" H 2100 1260 50  0001 C CNN
+F 3 "" H 2100 1260 50  0001 C CNN
+	1    2050 1300
 	1    0    0    -1  
 $EndComp
-$Comp
-L SmartFan-rescue:MMBT2222A-7-F Q6
-U 1 1 5B6231C7
-P 14800 3500
-F 0 "Q6" H 14674 3666 60  0000 L CNN
-F 1 "MMBT2222A-7-F" V 15050 3450 60  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 15000 3700 60  0001 L CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30041.pdf" H 15000 3800 60  0001 L CNN
-F 4 "MMBT2222A-FDICT-ND" H 15000 3900 60  0001 L CNN "Digi-Key_PN"
-F 5 "MMBT2222A-7-F" H 15000 4000 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 15000 4100 60  0001 L CNN "Category"
-F 7 "Transistors - Bipolar (BJT) - Single" H 15000 4200 60  0001 L CNN "Family"
-F 8 "https://www.diodes.com/assets/Datasheets/ds30041.pdf" H 15000 4300 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/diodes-incorporated/MMBT2222A-7-F/MMBT2222A-FDICT-ND/815723" H 15000 4400 60  0001 L CNN "DK_Detail_Page"
-F 10 "TRANS NPN 40V 0.6A SMD SOT23-3" H 15000 4500 60  0001 L CNN "Description"
-F 11 "Diodes Incorporated" H 15000 4600 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15000 4700 60  0001 L CNN "Status"
-	1    14800 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R16
-U 1 1 5B62339E
-P 14250 2200
-F 0 "R16" V 14330 2200 50  0000 C CNN
-F 1 "1k" V 14250 2200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 14180 2200 50  0001 C CNN
-F 3 "" H 14250 2200 50  0001 C CNN
-	1    14250 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:GND #PWR01
-U 1 1 5B623471
-P 14900 3850
-F 0 "#PWR01" H 14900 3600 50  0001 C CNN
-F 1 "GND" H 14900 3700 50  0000 C CNN
-F 2 "" H 14900 3850 50  0001 C CNN
-F 3 "" H 14900 3850 50  0001 C CNN
-	1    14900 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:+5V #PWR02
-U 1 1 5B623495
-P 14900 1850
-F 0 "#PWR02" H 14900 1700 50  0001 C CNN
-F 1 "+5V" H 14900 1990 50  0000 C CNN
-F 2 "" H 14900 1850 50  0001 C CNN
-F 3 "" H 14900 1850 50  0001 C CNN
-	1    14900 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:Conn_02x02_Counter_Clockwise J7
-U 1 1 5B6234DD
-P 14700 1050
-F 0 "J7" H 14750 1150 50  0000 C CNN
-F 1 "FAN_CONN" H 14750 850 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_MegaFit_2x02x5.70mm_Angled" H 14700 1050 50  0001 C CNN
-F 3 "" H 14700 1050 50  0001 C CNN
-	1    14700 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:GND #PWR03
-U 1 1 5B6239B7
-P 13650 2950
-F 0 "#PWR03" H 13650 2700 50  0001 C CNN
-F 1 "GND" H 13650 2800 50  0000 C CNN
-F 2 "" H 13650 2950 50  0001 C CNN
-F 3 "" H 13650 2950 50  0001 C CNN
-	1    13650 2950
-	1    0    0    -1  
-$EndComp
-Text Label 13600 1050 0    60   ~ 0
-120VAC_IN
-Text Label 13600 1150 0    60   ~ 0
-LO_SPD_120VAC
-Text Label 15950 1050 2    60   ~ 0
-MED_SPD_120VAC
-Text Label 15950 1150 2    60   ~ 0
-HI_SPD_120VAC
-NoConn ~ 15850 2150
-$Comp
-L SmartFan-rescue:R R12
-U 1 1 5B623446
-P 13650 2200
-F 0 "R12" V 13730 2200 50  0000 C CNN
-F 1 "1k" V 13650 2200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 13580 2200 50  0001 C CNN
-F 3 "" H 13650 2200 50  0001 C CNN
-	1    13650 2200
-	1    0    0    -1  
-$EndComp
-Text Label 16400 2900 2    60   ~ 0
-120VAC_IN
-Text Label 13100 1950 0    60   ~ 0
-LO_SPD_EN
-Text Label 16400 1950 2    60   ~ 0
-LO_SPD_120VAC
-$Comp
-L SmartFan-rescue:G5LE-14_DC5 RLY1
-U 1 1 5B62308D
-P 15650 2450
-F 0 "RLY1" H 15310 2720 50  0000 C CNN
-F 1 "G5LE-14_DC5" V 15300 2650 50  0000 R CNN
-F 2 "digikey-footprints:Relay_THT_G5LE-14" H 15850 2650 50  0001 L CNN
-F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5le.pdf" H 15850 2750 60  0001 L CNN
-F 4 "Z1011-ND" H 15850 2850 60  0001 L CNN "Digi-Key_PN"
-F 5 "G5LE-14 DC5" H 15850 2950 60  0001 L CNN "MPN"
-F 6 "Relays" H 15850 3050 60  0001 L CNN "Category"
-F 7 "Power Relays, Over 2 Amps" H 15850 3150 60  0001 L CNN "Family"
-F 8 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5le.pdf" H 15850 3250 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/omron-electronics-inc-emc-div/G5LE-14-DC5/Z1011-ND/280371" H 15850 3350 60  0001 L CNN "DK_Detail_Page"
-F 10 "RELAY GEN PURPOSE SPDT 10A 5V" H 15850 3450 60  0001 L CNN "Description"
-F 11 "Omron Electronics Inc-EMC Div" H 15850 3550 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15850 3650 60  0001 L CNN "Status"
-	1    15650 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:G5LE-14_DC5 RLY2
-U 1 1 5B62C124
-P 15650 4950
-F 0 "RLY2" H 15310 5220 50  0000 C CNN
-F 1 "G5LE-14_DC5" V 15300 5150 50  0000 R CNN
-F 2 "digikey-footprints:Relay_THT_G5LE-14" H 15850 5150 50  0001 L CNN
-F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5le.pdf" H 15850 5250 60  0001 L CNN
-F 4 "Z1011-ND" H 15850 5350 60  0001 L CNN "Digi-Key_PN"
-F 5 "G5LE-14 DC5" H 15850 5450 60  0001 L CNN "MPN"
-F 6 "Relays" H 15850 5550 60  0001 L CNN "Category"
-F 7 "Power Relays, Over 2 Amps" H 15850 5650 60  0001 L CNN "Family"
-F 8 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5le.pdf" H 15850 5750 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/omron-electronics-inc-emc-div/G5LE-14-DC5/Z1011-ND/280371" H 15850 5850 60  0001 L CNN "DK_Detail_Page"
-F 10 "RELAY GEN PURPOSE SPDT 10A 5V" H 15850 5950 60  0001 L CNN "Description"
-F 11 "Omron Electronics Inc-EMC Div" H 15850 6050 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15850 6150 60  0001 L CNN "Status"
-	1    15650 4950
-	1    0    0    -1  
-$EndComp
-Text Label 16400 4450 2    60   ~ 0
-MED_SPD_120VAC
-Text Label 13100 4450 0    60   ~ 0
-MED_SPD_EN
-Text Label 16400 5400 2    60   ~ 0
-120VAC_IN
-$Comp
-L SmartFan-rescue:R R13
-U 1 1 5B62C0FE
-P 13650 4700
-F 0 "R13" V 13730 4700 50  0000 C CNN
-F 1 "1k" V 13650 4700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 13580 4700 50  0001 C CNN
-F 3 "" H 13650 4700 50  0001 C CNN
-	1    13650 4700
-	1    0    0    -1  
-$EndComp
-NoConn ~ 15850 4650
-$Comp
-L SmartFan-rescue:GND #PWR04
-U 1 1 5B62C0F7
-P 13650 5450
-F 0 "#PWR04" H 13650 5200 50  0001 C CNN
-F 1 "GND" H 13650 5300 50  0000 C CNN
-F 2 "" H 13650 5450 50  0001 C CNN
-F 3 "" H 13650 5450 50  0001 C CNN
-	1    13650 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:+5V #PWR05
-U 1 1 5B62C0F1
-P 14900 4350
-F 0 "#PWR05" H 14900 4200 50  0001 C CNN
-F 1 "+5V" H 14900 4490 50  0000 C CNN
-F 2 "" H 14900 4350 50  0001 C CNN
-F 3 "" H 14900 4350 50  0001 C CNN
-	1    14900 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:GND #PWR06
-U 1 1 5B62C0EB
-P 14900 6350
-F 0 "#PWR06" H 14900 6100 50  0001 C CNN
-F 1 "GND" H 14900 6200 50  0000 C CNN
-F 2 "" H 14900 6350 50  0001 C CNN
-F 3 "" H 14900 6350 50  0001 C CNN
-	1    14900 6350
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R17
-U 1 1 5B62C0E5
-P 14250 4700
-F 0 "R17" V 14330 4700 50  0000 C CNN
-F 1 "1k" V 14250 4700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 14180 4700 50  0001 C CNN
-F 3 "" H 14250 4700 50  0001 C CNN
-	1    14250 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:MMBT2222A-7-F Q7
-U 1 1 5B62C0CA
-P 14800 6000
-F 0 "Q7" H 14674 6166 60  0000 L CNN
-F 1 "MMBT2222A-7-F" V 15050 5950 60  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 15000 6200 60  0001 L CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30041.pdf" H 15000 6300 60  0001 L CNN
-F 4 "MMBT2222A-FDICT-ND" H 15000 6400 60  0001 L CNN "Digi-Key_PN"
-F 5 "MMBT2222A-7-F" H 15000 6500 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 15000 6600 60  0001 L CNN "Category"
-F 7 "Transistors - Bipolar (BJT) - Single" H 15000 6700 60  0001 L CNN "Family"
-F 8 "https://www.diodes.com/assets/Datasheets/ds30041.pdf" H 15000 6800 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/diodes-incorporated/MMBT2222A-7-F/MMBT2222A-FDICT-ND/815723" H 15000 6900 60  0001 L CNN "DK_Detail_Page"
-F 10 "TRANS NPN 40V 0.6A SMD SOT23-3" H 15000 7000 60  0001 L CNN "Description"
-F 11 "Diodes Incorporated" H 15000 7100 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15000 7200 60  0001 L CNN "Status"
-	1    14800 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:LTV-816S-TA1 U3
-U 1 1 5B62C0BB
-P 13950 5150
-F 0 "U3" H 13950 5350 60  0000 C CNN
-F 1 "LTV-816S-TA1" H 14000 4950 60  0000 C CNN
-F 2 "digikey-footprints:SMD-4_4.6x7.62mm_P2.54mm" H 14150 5350 60  0001 L CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf" V 14150 5450 60  0001 L CNN
-F 4 "160-1892-1-ND" H 14150 5550 60  0001 L CNN "Digi-Key_PN"
-F 5 "LTV-816S-TA1" H 14150 5650 60  0001 L CNN "MPN"
-F 6 "Isolators" H 14150 5750 60  0001 L CNN "Category"
-F 7 "Optoisolators - Transistor, Photovoltaic Output" H 14150 5850 60  0001 L CNN "Family"
-F 8 "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf" H 14150 5950 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/lite-on-inc/LTV-816S-TA1/160-1892-1-ND/3306438" H 14150 6050 60  0001 L CNN "DK_Detail_Page"
-F 10 "OPTOISOLATR 5KV TRANSISTOR 4-SMD" H 14150 6150 60  0001 L CNN "Description"
-F 11 "Lite-On Inc." H 14150 6250 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 14150 6350 60  0001 L CNN "Status"
-	1    13950 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:G5LE-14_DC5 RLY3
-U 1 1 5B62C5FB
-P 15650 7450
-F 0 "RLY3" H 15310 7720 50  0000 C CNN
-F 1 "G5LE-14_DC5" V 15300 7650 50  0000 R CNN
-F 2 "digikey-footprints:Relay_THT_G5LE-14" H 15850 7650 50  0001 L CNN
-F 3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5le.pdf" H 15850 7750 60  0001 L CNN
-F 4 "Z1011-ND" H 15850 7850 60  0001 L CNN "Digi-Key_PN"
-F 5 "G5LE-14 DC5" H 15850 7950 60  0001 L CNN "MPN"
-F 6 "Relays" H 15850 8050 60  0001 L CNN "Category"
-F 7 "Power Relays, Over 2 Amps" H 15850 8150 60  0001 L CNN "Family"
-F 8 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5le.pdf" H 15850 8250 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/omron-electronics-inc-emc-div/G5LE-14-DC5/Z1011-ND/280371" H 15850 8350 60  0001 L CNN "DK_Detail_Page"
-F 10 "RELAY GEN PURPOSE SPDT 10A 5V" H 15850 8450 60  0001 L CNN "Description"
-F 11 "Omron Electronics Inc-EMC Div" H 15850 8550 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15850 8650 60  0001 L CNN "Status"
-	1    15650 7450
-	1    0    0    -1  
-$EndComp
-Text Label 16400 6950 2    60   ~ 0
-HI_SPD_120VAC
-Text Label 13100 6950 0    60   ~ 0
-HI_SPD_EN
-Text Label 16400 7900 2    60   ~ 0
-120VAC_IN
-$Comp
-L SmartFan-rescue:R R14
-U 1 1 5B62C618
-P 13650 7200
-F 0 "R14" V 13730 7200 50  0000 C CNN
-F 1 "1k" V 13650 7200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 13580 7200 50  0001 C CNN
-F 3 "" H 13650 7200 50  0001 C CNN
-	1    13650 7200
-	1    0    0    -1  
-$EndComp
-NoConn ~ 15850 7150
+NoConn ~ 2350 1300
 $Comp
 L SmartFan-rescue:GND #PWR07
-U 1 1 5B62C61F
-P 13650 7950
-F 0 "#PWR07" H 13650 7700 50  0001 C CNN
-F 1 "GND" H 13650 7800 50  0000 C CNN
-F 2 "" H 13650 7950 50  0001 C CNN
-F 3 "" H 13650 7950 50  0001 C CNN
-	1    13650 7950
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:+5V #PWR08
-U 1 1 5B62C625
-P 14900 6850
-F 0 "#PWR08" H 14900 6700 50  0001 C CNN
-F 1 "+5V" H 14900 6990 50  0000 C CNN
-F 2 "" H 14900 6850 50  0001 C CNN
-F 3 "" H 14900 6850 50  0001 C CNN
-	1    14900 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:GND #PWR09
-U 1 1 5B62C62B
-P 14900 8850
-F 0 "#PWR09" H 14900 8600 50  0001 C CNN
-F 1 "GND" H 14900 8700 50  0000 C CNN
-F 2 "" H 14900 8850 50  0001 C CNN
-F 3 "" H 14900 8850 50  0001 C CNN
-	1    14900 8850
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R18
-U 1 1 5B62C631
-P 14250 7200
-F 0 "R18" V 14330 7200 50  0000 C CNN
-F 1 "1k" V 14250 7200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 14180 7200 50  0001 C CNN
-F 3 "" H 14250 7200 50  0001 C CNN
-	1    14250 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:MMBT2222A-7-F Q8
-U 1 1 5B62C655
-P 14800 8500
-F 0 "Q8" H 14674 8666 60  0000 L CNN
-F 1 "MMBT2222A-7-F" V 15050 8450 60  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 15000 8700 60  0001 L CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30041.pdf" H 15000 8800 60  0001 L CNN
-F 4 "MMBT2222A-FDICT-ND" H 15000 8900 60  0001 L CNN "Digi-Key_PN"
-F 5 "MMBT2222A-7-F" H 15000 9000 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 15000 9100 60  0001 L CNN "Category"
-F 7 "Transistors - Bipolar (BJT) - Single" H 15000 9200 60  0001 L CNN "Family"
-F 8 "https://www.diodes.com/assets/Datasheets/ds30041.pdf" H 15000 9300 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/diodes-incorporated/MMBT2222A-7-F/MMBT2222A-FDICT-ND/815723" H 15000 9400 60  0001 L CNN "DK_Detail_Page"
-F 10 "TRANS NPN 40V 0.6A SMD SOT23-3" H 15000 9500 60  0001 L CNN "Description"
-F 11 "Diodes Incorporated" H 15000 9600 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15000 9700 60  0001 L CNN "Status"
-	1    14800 8500
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:LTV-816S-TA1 U4
-U 1 1 5B62C664
-P 13950 7650
-F 0 "U4" H 13950 7850 60  0000 C CNN
-F 1 "LTV-816S-TA1" H 14000 7450 60  0000 C CNN
-F 2 "digikey-footprints:SMD-4_4.6x7.62mm_P2.54mm" H 14150 7850 60  0001 L CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf" V 14150 7950 60  0001 L CNN
-F 4 "160-1892-1-ND" H 14150 8050 60  0001 L CNN "Digi-Key_PN"
-F 5 "LTV-816S-TA1" H 14150 8150 60  0001 L CNN "MPN"
-F 6 "Isolators" H 14150 8250 60  0001 L CNN "Category"
-F 7 "Optoisolators - Transistor, Photovoltaic Output" H 14150 8350 60  0001 L CNN "Family"
-F 8 "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf" H 14150 8450 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/lite-on-inc/LTV-816S-TA1/160-1892-1-ND/3306438" H 14150 8550 60  0001 L CNN "DK_Detail_Page"
-F 10 "OPTOISOLATR 5KV TRANSISTOR 4-SMD" H 14150 8650 60  0001 L CNN "Description"
-F 11 "Lite-On Inc." H 14150 8750 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 14150 8850 60  0001 L CNN "Status"
-	1    13950 7650
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:1N4148W-7-F D2
-U 1 1 5B62F08D
-P 14900 2450
-F 0 "D2" H 14900 2550 60  0000 C BNN
-F 1 "1N4148W-7-F" H 14950 2350 60  0000 C CNN
-F 2 "digikey-footprints:SOD-123" H 15100 2650 60  0001 L CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 15100 2750 60  0001 L CNN
-F 4 "1N4148W-FDICT-ND" H 15100 2850 60  0001 L CNN "Digi-Key_PN"
-F 5 "1N4148W-7-F" H 15100 2950 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 15100 3050 60  0001 L CNN "Category"
-F 7 "Diodes - Rectifiers - Single" H 15100 3150 60  0001 L CNN "Family"
-F 8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 15100 3250 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" H 15100 3350 60  0001 L CNN "DK_Detail_Page"
-F 10 "DIODE GEN PURP 100V 300MA SOD123" H 15100 3450 60  0001 L CNN "Description"
-F 11 "Diodes Incorporated" H 15100 3550 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15100 3650 60  0001 L CNN "Status"
-	1    14900 2450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L SmartFan-rescue:1N4148W-7-F D3
-U 1 1 5B62F5AD
-P 14900 4950
-F 0 "D3" H 14900 5050 60  0000 C BNN
-F 1 "1N4148W-7-F" H 14950 4850 60  0000 C CNN
-F 2 "digikey-footprints:SOD-123" H 15100 5150 60  0001 L CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 15100 5250 60  0001 L CNN
-F 4 "1N4148W-FDICT-ND" H 15100 5350 60  0001 L CNN "Digi-Key_PN"
-F 5 "1N4148W-7-F" H 15100 5450 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 15100 5550 60  0001 L CNN "Category"
-F 7 "Diodes - Rectifiers - Single" H 15100 5650 60  0001 L CNN "Family"
-F 8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 15100 5750 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" H 15100 5850 60  0001 L CNN "DK_Detail_Page"
-F 10 "DIODE GEN PURP 100V 300MA SOD123" H 15100 5950 60  0001 L CNN "Description"
-F 11 "Diodes Incorporated" H 15100 6050 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15100 6150 60  0001 L CNN "Status"
-	1    14900 4950
-	0    -1   -1   0   
-$EndComp
-$Comp
-L SmartFan-rescue:1N4148W-7-F D4
-U 1 1 5B62F703
-P 14900 7450
-F 0 "D4" H 14900 7550 60  0000 C BNN
-F 1 "1N4148W-7-F" H 14950 7350 60  0000 C CNN
-F 2 "digikey-footprints:SOD-123" H 15100 7650 60  0001 L CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 15100 7750 60  0001 L CNN
-F 4 "1N4148W-FDICT-ND" H 15100 7850 60  0001 L CNN "Digi-Key_PN"
-F 5 "1N4148W-7-F" H 15100 7950 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 15100 8050 60  0001 L CNN "Category"
-F 7 "Diodes - Rectifiers - Single" H 15100 8150 60  0001 L CNN "Family"
-F 8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" H 15100 8250 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" H 15100 8350 60  0001 L CNN "DK_Detail_Page"
-F 10 "DIODE GEN PURP 100V 300MA SOD123" H 15100 8450 60  0001 L CNN "Description"
-F 11 "Diodes Incorporated" H 15100 8550 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 15100 8650 60  0001 L CNN "Status"
-	1    14900 7450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L SmartFan-rescue:Barrel_Jack J1
-U 1 1 5B630043
-P 4250 1300
-F 0 "J1" H 4250 1510 50  0000 C CNN
-F 1 "Barrel_Jack" H 4250 1125 50  0000 C CNN
-F 2 "Connectors:BARREL_JACK" H 4300 1260 50  0001 C CNN
-F 3 "" H 4300 1260 50  0001 C CNN
-	1    4250 1300
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4550 1300
-$Comp
-L SmartFan-rescue:GND #PWR010
 U 1 1 5B63018C
-P 4700 1100
-F 0 "#PWR010" H 4700 850 50  0001 C CNN
-F 1 "GND" H 4700 950 50  0000 C CNN
-F 2 "" H 4700 1100 50  0001 C CNN
-F 3 "" H 4700 1100 50  0001 C CNN
-	1    4700 1100
+P 2500 1100
+F 0 "#PWR07" H 2500 850 50  0001 C CNN
+F 1 "GND" H 2500 950 50  0000 C CNN
+F 2 "" H 2500 1100 50  0001 C CNN
+F 3 "" H 2500 1100 50  0001 C CNN
+	1    2500 1100
 	-1   0    0    1   
 $EndComp
 $Comp
-L SmartFan-rescue:C C4
-U 1 1 5B632242
-P 7050 1250
-F 0 "C4" H 7075 1350 50  0000 L CNN
-F 1 "0.1uF" H 7075 1150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 7088 1100 50  0001 C CNN
-F 3 "" H 7050 1250 50  0001 C CNN
-F 4 "1276-6840-1-ND" H 7050 1250 60  0001 C CNN "DigikeyPN"
-F 5 "CL21B104KCFNNNE" H 7050 1250 60  0001 C CNN "MPN"
-	1    7050 1250
-	1    0    0    -1  
-$EndComp
-$Comp
 L SmartFan-rescue:C C3
-U 1 1 5B63236D
-P 6700 1250
-F 0 "C3" H 6725 1350 50  0000 L CNN
-F 1 "1uF" H 6725 1150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 6738 1100 50  0001 C CNN
-F 3 "" H 6700 1250 50  0001 C CNN
-F 4 "1276-3010-1-ND" H 6700 1250 60  0001 C CNN "DigikeyPN"
-F 5 "CL21F105ZBFNNNE" H 6700 1250 60  0001 C CNN "MPN"
-	1    6700 1250
+U 1 1 5B632242
+P 4850 1250
+F 0 "C3" H 4875 1350 50  0000 L CNN
+F 1 "0.1uF" H 4875 1150 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 4888 1100 50  0001 C CNN
+F 3 "" H 4850 1250 50  0001 C CNN
+F 4 "493-12624-1-ND" H 4850 1250 60  0001 C CNN "DigikeyPN"
+F 5 "CL21B104KCFNNNE" H 4850 1250 60  0001 C CNN "MPN"
+	1    4850 1250
 	1    0    0    -1  
 $EndComp
 $Comp
 L SmartFan-rescue:C C2
+U 1 1 5B63236D
+P 4500 1250
+F 0 "C2" H 4525 1350 50  0000 L CNN
+F 1 "1uF" H 4525 1150 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D4.0mm_P1.50mm" H 4538 1100 50  0001 C CNN
+F 3 "" H 4500 1250 50  0001 C CNN
+F 4 "493-15541-ND" H 4500 1250 60  0001 C CNN "DigikeyPN"
+F 5 "CL21F105ZBFNNNE" H 4500 1250 60  0001 C CNN "MPN"
+	1    4500 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SmartFan-rescue:C C1
 U 1 1 5B632443
-P 5600 1250
-F 0 "C2" H 5625 1350 50  0000 L CNN
-F 1 "1uF" H 5625 1150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 5638 1100 50  0001 C CNN
-F 3 "" H 5600 1250 50  0001 C CNN
-F 4 "1276-3010-1-ND" H 5600 1250 60  0001 C CNN "DigikeyPN"
-F 5 "CL21F105ZBFNNNE" H 5600 1250 60  0001 C CNN "MPN"
-	1    5600 1250
+P 3400 1250
+F 0 "C1" H 3425 1350 50  0000 L CNN
+F 1 "1uF" H 3425 1150 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D4.0mm_P1.50mm" H 3438 1100 50  0001 C CNN
+F 3 "" H 3400 1250 50  0001 C CNN
+F 4 "493-15541-ND" H 3400 1250 60  0001 C CNN "DigikeyPN"
+F 5 "CL21F105ZBFNNNE" H 3400 1250 60  0001 C CNN "MPN"
+	1    3400 1250
 	1    0    0    -1  
 $EndComp
 $Comp
 L SmartFan-rescue:MBR0540T1G D1
 U 1 1 5B63274D
-P 7550 1100
-F 0 "D1" H 7550 1200 60  0000 C BNN
-F 1 "MBR0540T1G" H 7550 950 60  0000 C CNN
-F 2 "digikey-footprints:SOD-123" H 7750 1300 60  0001 L CNN
-F 3 "http://www.onsemi.com/pub/Collateral/MBR0540T1-D.PDF" H 7750 1400 60  0001 L CNN
-F 4 "MBR0540T1GOSCT-ND" H 7750 1500 60  0001 L CNN "Digi-Key_PN"
-F 5 "MBR0540T1G" H 7750 1600 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 7750 1700 60  0001 L CNN "Category"
-F 7 "Diodes - Rectifiers - Single" H 7750 1800 60  0001 L CNN "Family"
-F 8 "http://www.onsemi.com/pub/Collateral/MBR0540T1-D.PDF" H 7750 1900 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/on-semiconductor/MBR0540T1G/MBR0540T1GOSCT-ND/917967" H 7750 2000 60  0001 L CNN "DK_Detail_Page"
-F 10 "DIODE SCHOTTKY 40V 500MA SOD123" H 7750 2100 60  0001 L CNN "Description"
-F 11 "ON Semiconductor" H 7750 2200 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 7750 2300 60  0001 L CNN "Status"
-	1    7550 1100
+P 5350 1100
+F 0 "D1" H 5350 1200 60  0000 C BNN
+F 1 "MBR0540T1G" H 5350 950 60  0000 C CNN
+F 2 "digikey-footprints:DO-41" H 5550 1300 60  0001 L CNN
+F 3 "http://www.onsemi.com/pub/Collateral/MBR0540T1-D.PDF" H 5550 1400 60  0001 L CNN
+F 4 "1N5817FSCT-ND" H 5550 1500 60  0001 L CNN "Digi-Key_PN"
+F 5 "MBR0540T1G" H 5550 1600 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 5550 1700 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Single" H 5550 1800 60  0001 L CNN "Family"
+F 8 "http://www.onsemi.com/pub/Collateral/MBR0540T1-D.PDF" H 5550 1900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/MBR0540T1G/MBR0540T1GOSCT-ND/917967" H 5550 2000 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE SCHOTTKY 40V 500MA SOD123" H 5550 2100 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 5550 2200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5550 2300 60  0001 L CNN "Status"
+	1    5350 1100
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:GND #PWR011
+L SmartFan-rescue:GND #PWR012
 U 1 1 5B632F9E
-P 6150 1700
-F 0 "#PWR011" H 6150 1450 50  0001 C CNN
-F 1 "GND" H 6150 1550 50  0000 C CNN
-F 2 "" H 6150 1700 50  0001 C CNN
-F 3 "" H 6150 1700 50  0001 C CNN
-	1    6150 1700
+P 3950 1700
+F 0 "#PWR012" H 3950 1450 50  0001 C CNN
+F 1 "GND" H 3950 1550 50  0000 C CNN
+F 2 "" H 3950 1700 50  0001 C CNN
+F 3 "" H 3950 1700 50  0001 C CNN
+	1    3950 1700
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:Conn_02x10_Odd_Even J2
+L SmartFan-rescue:Conn_02x10_Odd_Even J3
 U 1 1 5B6359E9
 P 3650 9400
-F 0 "J2" H 3700 9900 50  0000 C CNN
+F 0 "J3" H 3700 9900 50  0000 C CNN
 F 1 "JTAG_SWD" H 3700 8800 50  0000 C CNN
 F 2 "Connectors_IDC:IDC-Header_2x10_Pitch2.54mm_Straight" H 3650 9400 50  0001 C CNN
 F 3 "" H 3650 9400 50  0001 C CNN
@@ -581,10 +136,10 @@ NoConn ~ 3450 9500
 NoConn ~ 3450 9600
 NoConn ~ 3450 9800
 $Comp
-L SmartFan-rescue:+3.3V #PWR015
+L SmartFan-rescue:+3.3V #PWR011
 U 1 1 5B6375D3
 P 3700 8650
-F 0 "#PWR015" H 3700 8500 50  0001 C CNN
+F 0 "#PWR011" H 3700 8500 50  0001 C CNN
 F 1 "+3.3V" H 3700 8790 50  0000 C CNN
 F 2 "" H 3700 8650 50  0001 C CNN
 F 3 "" H 3700 8650 50  0001 C CNN
@@ -595,171 +150,16 @@ Text Label 2750 9300 0    60   ~ 0
 SWDIO
 Text Label 2750 9400 0    60   ~ 0
 SWCLK
-Text Label 2350 4900 1    60   ~ 0
+Text Label 3400 6450 1    60   ~ 0
 SWDIO
-Text Label 2250 4900 1    60   ~ 0
+Text Label 3300 6450 1    60   ~ 0
 SWCLK
+NoConn ~ 4050 4950
 $Comp
-L SmartFan-rescue:MMBT2222A-TP Q3
-U 1 1 5B638A47
-P 6300 5050
-F 0 "Q3" H 6174 5216 60  0000 L CNN
-F 1 "MMBT2222A-TP" H 6800 5100 60  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 6500 5250 60  0001 L CNN
-F 3 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" H 6500 5350 60  0001 L CNN
-F 4 "MMBT2222ATPMSCT-ND" H 6500 5450 60  0001 L CNN "Digi-Key_PN"
-F 5 "MMBT2222A-TP" H 6500 5550 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 6500 5650 60  0001 L CNN "Category"
-F 7 "Transistors - Bipolar (BJT) - Single" H 6500 5750 60  0001 L CNN "Family"
-F 8 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" H 6500 5850 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/micro-commercial-co/MMBT2222A-TP/MMBT2222ATPMSCT-ND/717394" H 6500 5950 60  0001 L CNN "DK_Detail_Page"
-F 10 "TRANS NPN 40V 0.6A SOT23" H 6500 6050 60  0001 L CNN "Description"
-F 11 "Micro Commercial Co" H 6500 6150 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 6500 6250 60  0001 L CNN "Status"
-	1    6300 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R5
-U 1 1 5B638F9F
-P 5750 5050
-F 0 "R5" V 5830 5050 50  0000 C CNN
-F 1 "1k" V 5750 5050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 5680 5050 50  0001 C CNN
-F 3 "" H 5750 5050 50  0001 C CNN
-	1    5750 5050
-	0    1    1    0   
-$EndComp
-$Comp
-L SmartFan-rescue:R R7
-U 1 1 5B639361
-P 6100 4650
-F 0 "R7" V 6180 4650 50  0000 C CNN
-F 1 "10k" V 6100 4650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 6030 4650 50  0001 C CNN
-F 3 "" H 6100 4650 50  0001 C CNN
-	1    6100 4650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L SmartFan-rescue:MMBT2222A-TP Q5
-U 1 1 5B639EF1
-P 7050 5800
-F 0 "Q5" H 6924 5966 60  0000 L CNN
-F 1 "MMBT2222A-TP" H 6700 5600 60  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 7250 6000 60  0001 L CNN
-F 3 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" H 7250 6100 60  0001 L CNN
-F 4 "MMBT2222ATPMSCT-ND" H 7250 6200 60  0001 L CNN "Digi-Key_PN"
-F 5 "MMBT2222A-TP" H 7250 6300 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 7250 6400 60  0001 L CNN "Category"
-F 7 "Transistors - Bipolar (BJT) - Single" H 7250 6500 60  0001 L CNN "Family"
-F 8 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" H 7250 6600 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/micro-commercial-co/MMBT2222A-TP/MMBT2222ATPMSCT-ND/717394" H 7250 6700 60  0001 L CNN "DK_Detail_Page"
-F 10 "TRANS NPN 40V 0.6A SOT23" H 7250 6800 60  0001 L CNN "Description"
-F 11 "Micro Commercial Co" H 7250 6900 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 7250 7000 60  0001 L CNN "Status"
-	1    7050 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R9
-U 1 1 5B639EF7
-P 6500 5800
-F 0 "R9" V 6580 5800 50  0000 C CNN
-F 1 "1k" V 6500 5800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 6430 5800 50  0001 C CNN
-F 3 "" H 6500 5800 50  0001 C CNN
-	1    6500 5800
-	0    1    1    0   
-$EndComp
-$Comp
-L SmartFan-rescue:R R10
-U 1 1 5B639EFD
-P 6850 5400
-F 0 "R10" V 6930 5400 50  0000 C CNN
-F 1 "10k" V 6850 5400 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 6780 5400 50  0001 C CNN
-F 3 "" H 6850 5400 50  0001 C CNN
-	1    6850 5400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L SmartFan-rescue:MMBT2222A-TP Q4
-U 1 1 5B63A015
-P 6300 6850
-F 0 "Q4" H 6174 7016 60  0000 L CNN
-F 1 "MMBT2222A-TP" H 6800 6900 60  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 6500 7050 60  0001 L CNN
-F 3 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" H 6500 7150 60  0001 L CNN
-F 4 "MMBT2222ATPMSCT-ND" H 6500 7250 60  0001 L CNN "Digi-Key_PN"
-F 5 "MMBT2222A-TP" H 6500 7350 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 6500 7450 60  0001 L CNN "Category"
-F 7 "Transistors - Bipolar (BJT) - Single" H 6500 7550 60  0001 L CNN "Family"
-F 8 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" H 6500 7650 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/micro-commercial-co/MMBT2222A-TP/MMBT2222ATPMSCT-ND/717394" H 6500 7750 60  0001 L CNN "DK_Detail_Page"
-F 10 "TRANS NPN 40V 0.6A SOT23" H 6500 7850 60  0001 L CNN "Description"
-F 11 "Micro Commercial Co" H 6500 7950 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 6500 8050 60  0001 L CNN "Status"
-	1    6300 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R6
-U 1 1 5B63A01B
-P 5750 6850
-F 0 "R6" V 5830 6850 50  0000 C CNN
-F 1 "1k" V 5750 6850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 5680 6850 50  0001 C CNN
-F 3 "" H 5750 6850 50  0001 C CNN
-	1    5750 6850
-	0    1    1    0   
-$EndComp
-$Comp
-L SmartFan-rescue:R R8
-U 1 1 5B63A021
-P 6100 6450
-F 0 "R8" V 6180 6450 50  0000 C CNN
-F 1 "10k" V 6100 6450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 6030 6450 50  0001 C CNN
-F 3 "" H 6100 6450 50  0001 C CNN
-	1    6100 6450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L SmartFan-rescue:GND #PWR016
-U 1 1 5B63A335
-P 7600 7350
-F 0 "#PWR016" H 7600 7100 50  0001 C CNN
-F 1 "GND" H 7600 7200 50  0000 C CNN
-F 2 "" H 7600 7350 50  0001 C CNN
-F 3 "" H 7600 7350 50  0001 C CNN
-	1    7600 7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:+5V #PWR017
-U 1 1 5B63B3E4
-P 5950 4450
-F 0 "#PWR017" H 5950 4300 50  0001 C CNN
-F 1 "+5V" H 5950 4590 50  0000 C CNN
-F 2 "" H 5950 4450 50  0001 C CNN
-F 3 "" H 5950 4450 50  0001 C CNN
-	1    5950 4450
-	1    0    0    -1  
-$EndComp
-Text Label 8300 6450 2    60   ~ 0
-LO_SPD_EN
-Text Label 8300 5400 2    60   ~ 0
-MED_SPD_EN
-Text Label 8300 4650 2    60   ~ 0
-HI_SPD_EN
-NoConn ~ 3000 3400
-NoConn ~ 1800 3600
-$Comp
-L SmartFan-rescue:+5V #PWR018
+L SmartFan-rescue:+5V #PWR03
 U 1 1 5B630ADB
 P 1350 1100
-F 0 "#PWR018" H 1350 950 50  0001 C CNN
+F 0 "#PWR03" H 1350 950 50  0001 C CNN
 F 1 "+5V" H 1350 1240 50  0000 C CNN
 F 2 "" H 1350 1100 50  0001 C CNN
 F 3 "" H 1350 1100 50  0001 C CNN
@@ -767,21 +167,10 @@ F 3 "" H 1350 1100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SmartFan-rescue:+3.3V #PWR019
-U 1 1 5B630B3F
-P 900 1100
-F 0 "#PWR019" H 900 950 50  0001 C CNN
-F 1 "+3.3V" H 900 1240 50  0000 C CNN
-F 2 "" H 900 1100 50  0001 C CNN
-F 3 "" H 900 1100 50  0001 C CNN
-	1    900  1100
-	-1   0    0    1   
-$EndComp
-$Comp
-L SmartFan-rescue:GND #PWR020
+L SmartFan-rescue:GND #PWR04
 U 1 1 5B630BA3
 P 1350 1700
-F 0 "#PWR020" H 1350 1450 50  0001 C CNN
+F 0 "#PWR04" H 1350 1450 50  0001 C CNN
 F 1 "GND" H 1350 1550 50  0000 C CNN
 F 2 "" H 1350 1700 50  0001 C CNN
 F 3 "" H 1350 1700 50  0001 C CNN
@@ -789,21 +178,10 @@ F 3 "" H 1350 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:PWR_FLAG #FLG021
-U 1 1 5B630C07
-P 900 950
-F 0 "#FLG021" H 900 1025 50  0001 C CNN
-F 1 "PWR_FLAG" H 900 1100 50  0000 C CNN
-F 2 "" H 900 950 50  0001 C CNN
-F 3 "" H 900 950 50  0001 C CNN
-	1    900  950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:PWR_FLAG #FLG022
+L SmartFan-rescue:PWR_FLAG #FLG04
 U 1 1 5B630F6F
 P 1350 1550
-F 0 "#FLG022" H 1350 1625 50  0001 C CNN
+F 0 "#FLG04" H 1350 1625 50  0001 C CNN
 F 1 "PWR_FLAG" H 1350 1700 50  0000 C CNN
 F 2 "" H 1350 1550 50  0001 C CNN
 F 3 "" H 1350 1550 50  0001 C CNN
@@ -811,10 +189,10 @@ F 3 "" H 1350 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:PWR_FLAG #FLG023
+L SmartFan-rescue:PWR_FLAG #FLG03
 U 1 1 5B631146
 P 1350 950
-F 0 "#FLG023" H 1350 1025 50  0001 C CNN
+F 0 "#FLG03" H 1350 1025 50  0001 C CNN
 F 1 "PWR_FLAG" H 1350 1100 50  0000 C CNN
 F 2 "" H 1350 950 50  0001 C CNN
 F 3 "" H 1350 950 50  0001 C CNN
@@ -823,41 +201,41 @@ F 3 "" H 1350 950 50  0001 C CNN
 $EndComp
 Text Notes 2950 8400 0    60   ~ 0
 SWD Programming Port
-Text Label 12150 5950 2    60   ~ 0
+Text Label 12300 5650 2    60   ~ 0
 BTLE_LED
-Text Label 12150 6050 2    60   ~ 0
+Text Label 12300 5750 2    60   ~ 0
 ANT_LED
-Text Notes 5050 700  0    60   ~ 0
+Text Notes 2900 700  0    60   ~ 0
 5v Power Regulator
 $Comp
-L SmartFan-rescue:+9V #PWR033
+L SmartFan-rescue:+9V #PWR09
 U 1 1 5B688F96
-P 5200 1000
-F 0 "#PWR033" H 5200 850 50  0001 C CNN
-F 1 "+9V" H 5200 1140 50  0000 C CNN
-F 2 "" H 5200 1000 50  0001 C CNN
-F 3 "" H 5200 1000 50  0001 C CNN
-	1    5200 1000
+P 3000 1000
+F 0 "#PWR09" H 3000 850 50  0001 C CNN
+F 1 "+9V" H 3000 1140 50  0000 C CNN
+F 2 "" H 3000 1000 50  0001 C CNN
+F 3 "" H 3000 1000 50  0001 C CNN
+	1    3000 1000
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:+9V #PWR034
+L SmartFan-rescue:+9V #PWR08
 U 1 1 5B689122
-P 4700 1500
-F 0 "#PWR034" H 4700 1350 50  0001 C CNN
-F 1 "+9V" H 4700 1640 50  0000 C CNN
-F 2 "" H 4700 1500 50  0001 C CNN
-F 3 "" H 4700 1500 50  0001 C CNN
-	1    4700 1500
+P 2500 1500
+F 0 "#PWR08" H 2500 1350 50  0001 C CNN
+F 1 "+9V" H 2500 1640 50  0000 C CNN
+F 2 "" H 2500 1500 50  0001 C CNN
+F 3 "" H 2500 1500 50  0001 C CNN
+	1    2500 1500
 	-1   0    0    1   
 $EndComp
-Text Notes 3950 700  0    60   ~ 0
+Text Notes 1800 700  0    60   ~ 0
 7-12vdc Power In
 $Comp
-L SmartFan-rescue:PWR_FLAG #FLG035
+L SmartFan-rescue:PWR_FLAG #FLG02
 U 1 1 5B68A0AF
 P 900 1550
-F 0 "#FLG035" H 900 1625 50  0001 C CNN
+F 0 "#FLG02" H 900 1625 50  0001 C CNN
 F 1 "PWR_FLAG" H 900 1700 50  0000 C CNN
 F 2 "" H 900 1550 50  0001 C CNN
 F 3 "" H 900 1550 50  0001 C CNN
@@ -865,10 +243,10 @@ F 3 "" H 900 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:+9V #PWR036
+L SmartFan-rescue:+9V #PWR02
 U 1 1 5B68A125
 P 900 1700
-F 0 "#PWR036" H 900 1550 50  0001 C CNN
+F 0 "#PWR02" H 900 1550 50  0001 C CNN
 F 1 "+9V" H 900 1840 50  0000 C CNN
 F 2 "" H 900 1700 50  0001 C CNN
 F 3 "" H 900 1700 50  0001 C CNN
@@ -878,381 +256,229 @@ $EndComp
 Text Notes 650  700  0    60   ~ 0
 Power Flags
 $Comp
-L SmartFan-rescue:+5V #PWR037
+L SmartFan-rescue:+5V #PWR016
 U 1 1 5B68AF7F
-P 7900 1000
-F 0 "#PWR037" H 7900 850 50  0001 C CNN
-F 1 "+5V" H 7900 1140 50  0000 C CNN
-F 2 "" H 7900 1000 50  0001 C CNN
-F 3 "" H 7900 1000 50  0001 C CNN
-	1    7900 1000
+P 5700 1000
+F 0 "#PWR016" H 5700 850 50  0001 C CNN
+F 1 "+5V" H 5700 1140 50  0000 C CNN
+F 2 "" H 5700 1000 50  0001 C CNN
+F 3 "" H 5700 1000 50  0001 C CNN
+	1    5700 1000
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:L7805CV U1
+L SmartFan-rescue:L7805CV U2
 U 1 1 5B631782
-P 6150 1100
-F 0 "U1" H 6150 1250 60  0000 C CNN
-F 1 "L7805CV" H 6150 1350 60  0000 C CNN
-F 2 "digikey-footprints:SOT-23-3" H 6350 1300 60  0001 L CNN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 6350 1400 60  0001 L CNN
-F 4 "497-1443-5-ND" H 6350 1500 60  0001 L CNN "Digi-Key_PN"
-F 5 "L7805CV" H 6350 1600 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 6350 1700 60  0001 L CNN "Category"
-F 7 "PMIC - Voltage Regulators - Linear" H 6350 1800 60  0001 L CNN "Family"
-F 8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 6350 1900 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/stmicroelectronics/L7805CV/497-1443-5-ND/585964" H 6350 2000 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC REG LINEAR 5V 1.5A TO220AB" H 6350 2100 60  0001 L CNN "Description"
-F 11 "STMicroelectronics" H 6350 2200 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 6350 2300 60  0001 L CNN "Status"
-	1    6150 1100
+P 3950 1100
+F 0 "U2" H 3950 1250 60  0000 C CNN
+F 1 "L7805CV" H 3950 1350 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 4150 1300 60  0001 L CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 4150 1400 60  0001 L CNN
+F 4 "497-1443-5-ND" H 4150 1500 60  0001 L CNN "Digi-Key_PN"
+F 5 "L7805CV" H 4150 1600 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 4150 1700 60  0001 L CNN "Category"
+F 7 "PMIC - Voltage Regulators - Linear" H 4150 1800 60  0001 L CNN "Family"
+F 8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 4150 1900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/stmicroelectronics/L7805CV/497-1443-5-ND/585964" H 4150 2000 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC REG LINEAR 5V 1.5A TO220AB" H 4150 2100 60  0001 L CNN "Description"
+F 11 "STMicroelectronics" H 4150 2200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 4150 2300 60  0001 L CNN "Status"
+	1    3950 1100
 	1    0    0    -1  
 $EndComp
-Text Label 3550 3200 2    60   ~ 0
-SCL_3v3
-Text Label 3550 3300 2    60   ~ 0
-SDA_3v3
 $Comp
-L SmartFan-rescue:2N3904 Q9
+L SmartFan-rescue:2N3904 Q1
 U 1 1 5B8AF166
-P 9100 9450
-F 0 "Q9" V 9100 9600 50  0000 L CNN
-F 1 "2N3904" V 9300 9300 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 9300 9375 50  0001 L CIN
-F 3 "" H 9100 9450 50  0001 L CNN
-	1    9100 9450
+P 7250 4650
+F 0 "Q1" V 7250 4800 50  0000 L CNN
+F 1 "2N3904" V 7450 4500 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 7450 4575 50  0001 L CIN
+F 3 "" H 7250 4650 50  0001 L CNN
+	1    7250 4650
 	0    1    1    0   
 $EndComp
 $Comp
-L SmartFan-rescue:R R25
+L SmartFan-rescue:R R3
 U 1 1 5B8AF740
-P 9100 9100
-F 0 "R25" V 9180 9100 50  0000 C CNN
-F 1 "10k" V 9100 9100 50  0000 C CNN
-F 2 "" V 9030 9100 50  0001 C CNN
-F 3 "" H 9100 9100 50  0001 C CNN
-	1    9100 9100
+P 7250 4300
+F 0 "R3" V 7330 4300 50  0000 C CNN
+F 1 "10k" V 7250 4300 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7180 4300 50  0001 C CNN
+F 3 "" H 7250 4300 50  0001 C CNN
+	1    7250 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:+3.3V #PWR022
+L SmartFan-rescue:+3.3V #PWR017
 U 1 1 5B8AFF6F
-P 8900 8800
-F 0 "#PWR022" H 8900 8650 50  0001 C CNN
-F 1 "+3.3V" H 8900 8940 50  0000 C CNN
-F 2 "" H 8900 8800 50  0001 C CNN
-F 3 "" H 8900 8800 50  0001 C CNN
-	1    8900 8800
+P 7050 4000
+F 0 "#PWR017" H 7050 3850 50  0001 C CNN
+F 1 "+3.3V" H 7050 4140 50  0000 C CNN
+F 2 "" H 7050 4000 50  0001 C CNN
+F 3 "" H 7050 4000 50  0001 C CNN
+	1    7050 4000
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:R R23
+L SmartFan-rescue:R R1
 U 1 1 5B8B023B
-P 8700 9100
-F 0 "R23" V 8780 9100 50  0000 C CNN
-F 1 "4.7k" V 8700 9100 50  0000 C CNN
-F 2 "" V 8630 9100 50  0001 C CNN
-F 3 "" H 8700 9100 50  0001 C CNN
-	1    8700 9100
+P 6850 4300
+F 0 "R1" V 6930 4300 50  0000 C CNN
+F 1 "4.7k" V 6850 4300 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6780 4300 50  0001 C CNN
+F 3 "" H 6850 4300 50  0001 C CNN
+	1    6850 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:R R26
+L SmartFan-rescue:R R5
 U 1 1 5B8B0919
-P 9500 9100
-F 0 "R26" V 9580 9100 50  0000 C CNN
-F 1 "4.7k" V 9500 9100 50  0000 C CNN
-F 2 "" V 9430 9100 50  0001 C CNN
-F 3 "" H 9500 9100 50  0001 C CNN
-	1    9500 9100
+P 7650 4300
+F 0 "R5" V 7730 4300 50  0000 C CNN
+F 1 "4.7k" V 7650 4300 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7580 4300 50  0001 C CNN
+F 3 "" H 7650 4300 50  0001 C CNN
+	1    7650 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:1N914BTR D5
+L SmartFan-rescue:1N914BTR D2
 U 1 1 5B8B0FD6
-P 9100 9900
-F 0 "D5" H 9100 10000 60  0000 C BNN
-F 1 "1N914BTR" H 9100 9800 60  0000 C CNN
-F 2 "digikey-footprints:DO-35" H 9300 10100 60  0001 L CNN
-F 3 "https://www.fairchildsemi.com/datasheets/1N/1N914.pdf" H 9300 10200 60  0001 L CNN
-F 4 "1N914BCT-ND" H 9300 10300 60  0001 L CNN "Digi-Key_PN"
-F 5 "1N914BTR" H 9300 10400 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 9300 10500 60  0001 L CNN "Category"
-F 7 "Diodes - Rectifiers - Single" H 9300 10600 60  0001 L CNN "Family"
-F 8 "https://www.fairchildsemi.com/datasheets/1N/1N914.pdf" H 9300 10700 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/on-semiconductor/1N914BTR/1N914BCT-ND/458919" H 9300 10800 60  0001 L CNN "DK_Detail_Page"
-F 10 "DIODE GEN PURP 100V 200MA DO35" H 9300 10900 60  0001 L CNN "Description"
-F 11 "ON Semiconductor" H 9300 11000 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 9300 11100 60  0001 L CNN "Status"
-	1    9100 9900
+P 7250 5100
+F 0 "D2" H 7250 5200 60  0000 C BNN
+F 1 "1N914BTR" H 7250 5000 60  0000 C CNN
+F 2 "digikey-footprints:DO-35" H 7450 5300 60  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/1N/1N914.pdf" H 7450 5400 60  0001 L CNN
+F 4 "1N914BCT-ND" H 7450 5500 60  0001 L CNN "Digi-Key_PN"
+F 5 "1N914BTR" H 7450 5600 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 7450 5700 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Single" H 7450 5800 60  0001 L CNN "Family"
+F 8 "https://www.fairchildsemi.com/datasheets/1N/1N914.pdf" H 7450 5900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/1N914BTR/1N914BCT-ND/458919" H 7450 6000 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE GEN PURP 100V 200MA DO35" H 7450 6100 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 7450 6200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 7450 6300 60  0001 L CNN "Status"
+	1    7250 5100
 	1    0    0    -1  
 $EndComp
-Text Label 8200 9550 0    60   ~ 0
-SCL_3v3
-Text Label 9900 9550 2    60   ~ 0
-SCL_5v
 $Comp
-L SmartFan-rescue:2N3904 Q13
+L SmartFan-rescue:2N3904 Q2
 U 1 1 5B8B265D
-P 11200 9450
-F 0 "Q13" V 11200 9600 50  0000 L CNN
-F 1 "2N3904" V 11400 9300 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 11400 9375 50  0001 L CIN
-F 3 "" H 11200 9450 50  0001 L CNN
-	1    11200 9450
+P 7250 6350
+F 0 "Q2" V 7250 6500 50  0000 L CNN
+F 1 "2N3904" V 7450 6200 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 7450 6275 50  0001 L CIN
+F 3 "" H 7250 6350 50  0001 L CNN
+	1    7250 6350
 	0    1    1    0   
 $EndComp
 $Comp
-L SmartFan-rescue:R R32
+L SmartFan-rescue:R R4
 U 1 1 5B8B2663
-P 11200 9100
-F 0 "R32" V 11280 9100 50  0000 C CNN
-F 1 "10k" V 11200 9100 50  0000 C CNN
-F 2 "" V 11130 9100 50  0001 C CNN
-F 3 "" H 11200 9100 50  0001 C CNN
-	1    11200 9100
+P 7250 6000
+F 0 "R4" V 7330 6000 50  0000 C CNN
+F 1 "10k" V 7250 6000 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7180 6000 50  0001 C CNN
+F 3 "" H 7250 6000 50  0001 C CNN
+	1    7250 6000
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:+3.3V #PWR028
+L SmartFan-rescue:+3.3V #PWR018
 U 1 1 5B8B266E
-P 11000 8800
-F 0 "#PWR028" H 11000 8650 50  0001 C CNN
-F 1 "+3.3V" H 11000 8940 50  0000 C CNN
-F 2 "" H 11000 8800 50  0001 C CNN
-F 3 "" H 11000 8800 50  0001 C CNN
-	1    11000 8800
+P 7050 5700
+F 0 "#PWR018" H 7050 5550 50  0001 C CNN
+F 1 "+3.3V" H 7050 5840 50  0000 C CNN
+F 2 "" H 7050 5700 50  0001 C CNN
+F 3 "" H 7050 5700 50  0001 C CNN
+	1    7050 5700
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:R R31
+L SmartFan-rescue:R R2
 U 1 1 5B8B2674
-P 10800 9100
-F 0 "R31" V 10880 9100 50  0000 C CNN
-F 1 "4.7k" V 10800 9100 50  0000 C CNN
-F 2 "" V 10730 9100 50  0001 C CNN
-F 3 "" H 10800 9100 50  0001 C CNN
-	1    10800 9100
+P 6850 6000
+F 0 "R2" V 6930 6000 50  0000 C CNN
+F 1 "4.7k" V 6850 6000 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6780 6000 50  0001 C CNN
+F 3 "" H 6850 6000 50  0001 C CNN
+	1    6850 6000
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:R R35
+L SmartFan-rescue:R R6
 U 1 1 5B8B267F
-P 11600 9100
-F 0 "R35" V 11680 9100 50  0000 C CNN
-F 1 "4.7k" V 11600 9100 50  0000 C CNN
-F 2 "" V 11530 9100 50  0001 C CNN
-F 3 "" H 11600 9100 50  0001 C CNN
-	1    11600 9100
+P 7650 6000
+F 0 "R6" V 7730 6000 50  0000 C CNN
+F 1 "4.7k" V 7650 6000 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7580 6000 50  0001 C CNN
+F 3 "" H 7650 6000 50  0001 C CNN
+	1    7650 6000
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:1N914BTR D6
+L SmartFan-rescue:1N914BTR D3
 U 1 1 5B8B2696
-P 11200 9900
-F 0 "D6" H 11200 10000 60  0000 C BNN
-F 1 "1N914BTR" H 11200 9800 60  0000 C CNN
-F 2 "digikey-footprints:DO-35" H 11400 10100 60  0001 L CNN
-F 3 "https://www.fairchildsemi.com/datasheets/1N/1N914.pdf" H 11400 10200 60  0001 L CNN
-F 4 "1N914BCT-ND" H 11400 10300 60  0001 L CNN "Digi-Key_PN"
-F 5 "1N914BTR" H 11400 10400 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 11400 10500 60  0001 L CNN "Category"
-F 7 "Diodes - Rectifiers - Single" H 11400 10600 60  0001 L CNN "Family"
-F 8 "https://www.fairchildsemi.com/datasheets/1N/1N914.pdf" H 11400 10700 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/on-semiconductor/1N914BTR/1N914BCT-ND/458919" H 11400 10800 60  0001 L CNN "DK_Detail_Page"
-F 10 "DIODE GEN PURP 100V 200MA DO35" H 11400 10900 60  0001 L CNN "Description"
-F 11 "ON Semiconductor" H 11400 11000 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 11400 11100 60  0001 L CNN "Status"
-	1    11200 9900
+P 7250 6800
+F 0 "D3" H 7250 6900 60  0000 C BNN
+F 1 "1N914BTR" H 7250 6700 60  0000 C CNN
+F 2 "digikey-footprints:DO-35" H 7450 7000 60  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/1N/1N914.pdf" H 7450 7100 60  0001 L CNN
+F 4 "1N914BCT-ND" H 7450 7200 60  0001 L CNN "Digi-Key_PN"
+F 5 "1N914BTR" H 7450 7300 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 7450 7400 60  0001 L CNN "Category"
+F 7 "Diodes - Rectifiers - Single" H 7450 7500 60  0001 L CNN "Family"
+F 8 "https://www.fairchildsemi.com/datasheets/1N/1N914.pdf" H 7450 7600 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/1N914BTR/1N914BCT-ND/458919" H 7450 7700 60  0001 L CNN "DK_Detail_Page"
+F 10 "DIODE GEN PURP 100V 200MA DO35" H 7450 7800 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 7450 7900 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 7450 8000 60  0001 L CNN "Status"
+	1    7250 6800
 	1    0    0    -1  
 $EndComp
-Text Label 10300 9550 0    60   ~ 0
-SDA_3v3
-Text Label 12000 9550 2    60   ~ 0
-SDA_5v
 Wire Wire Line
-	14250 2050 14250 1950
+	2350 1400 2500 1400
 Wire Wire Line
-	14250 1950 14900 1950
+	2500 1400 2500 1500
 Wire Wire Line
-	15450 1950 15450 2150
+	2500 1100 2500 1200
 Wire Wire Line
-	14900 1850 14900 1950
-Connection ~ 14900 1950
-Wire Wire Line
-	14250 2350 14250 2550
-Wire Wire Line
-	14900 2650 14900 2750
-Wire Wire Line
-	15450 2750 14900 2750
-Connection ~ 14900 2750
-Wire Wire Line
-	13650 2750 13650 2950
-Wire Wire Line
-	13100 1950 13650 1950
-Wire Wire Line
-	13650 1950 13650 2050
-Wire Wire Line
-	15750 2750 15750 2900
-Wire Wire Line
-	15750 2900 16400 2900
-Wire Wire Line
-	13600 1050 14500 1050
-Wire Wire Line
-	13600 1150 14500 1150
-Wire Wire Line
-	15000 1050 15950 1050
-Wire Wire Line
-	15000 1150 15950 1150
-Wire Wire Line
-	15650 2150 15650 1950
-Wire Wire Line
-	15650 1950 16400 1950
-Wire Wire Line
-	13650 2350 13650 2550
+	2500 1200 2350 1200
 Wire Notes Line
-	13050 1650 16450 1650
+	1700 600  1700 2000
 Wire Notes Line
-	16450 4100 13050 4100
+	1750 600  2750 600 
 Wire Notes Line
-	13050 4100 13050 1650
+	2700 600  2700 2000
+Wire Wire Line
+	3000 1100 3400 1100
+Connection ~ 3400 1100
+Wire Wire Line
+	4250 1100 4500 1100
+Connection ~ 4500 1100
+Connection ~ 4850 1100
+Wire Wire Line
+	5550 1100 5700 1100
+Wire Wire Line
+	3400 1400 3400 1600
+Wire Wire Line
+	3400 1600 3950 1600
+Wire Wire Line
+	4850 1600 4850 1400
+Connection ~ 3950 1600
+Wire Wire Line
+	4500 1400 4500 1600
+Connection ~ 4500 1600
+Wire Wire Line
+	3950 1400 3950 1600
 Wire Notes Line
-	13050 4150 16450 4150
+	2800 600  2800 2000
 Wire Notes Line
-	13050 6600 13050 4150
+	2800 2000 5900 2000
 Wire Notes Line
-	16450 6600 13050 6600
-Wire Wire Line
-	13650 4850 13650 5050
-Wire Wire Line
-	15650 4450 16400 4450
-Wire Wire Line
-	15650 4650 15650 4450
-Wire Wire Line
-	15750 5400 16400 5400
-Wire Wire Line
-	15750 5250 15750 5400
-Wire Wire Line
-	13650 4450 13650 4550
-Wire Wire Line
-	13100 4450 13650 4450
-Wire Wire Line
-	13650 5250 13650 5450
-Connection ~ 14900 5250
-Wire Wire Line
-	15450 5250 14900 5250
-Wire Wire Line
-	14900 5150 14900 5250
-Wire Wire Line
-	14250 4850 14250 5050
-Wire Wire Line
-	14600 6000 14600 5250
-Connection ~ 14900 4450
-Wire Wire Line
-	14900 4350 14900 4450
-Wire Wire Line
-	15450 4450 15450 4650
-Wire Wire Line
-	14250 4450 14900 4450
-Wire Wire Line
-	14250 4550 14250 4450
+	5900 2000 5900 600 
 Wire Notes Line
-	13050 6650 16450 6650
-Wire Notes Line
-	13050 9100 13050 6650
-Wire Notes Line
-	16450 9100 13050 9100
-Wire Wire Line
-	13650 7350 13650 7550
-Wire Wire Line
-	15650 6950 16400 6950
-Wire Wire Line
-	15650 7150 15650 6950
-Wire Wire Line
-	15750 7900 16400 7900
-Wire Wire Line
-	15750 7750 15750 7900
-Wire Wire Line
-	13650 6950 13650 7050
-Wire Wire Line
-	13100 6950 13650 6950
-Wire Wire Line
-	13650 7750 13650 7950
-Connection ~ 14900 7750
-Wire Wire Line
-	15450 7750 14900 7750
-Wire Wire Line
-	14900 7650 14900 7750
-Wire Wire Line
-	14250 7350 14250 7550
-Wire Wire Line
-	14600 8500 14600 7750
-Connection ~ 14900 6950
-Wire Wire Line
-	14900 6850 14900 6950
-Wire Wire Line
-	15450 6950 15450 7150
-Wire Wire Line
-	14250 6950 14900 6950
-Wire Wire Line
-	14250 7050 14250 6950
-Wire Notes Line
-	13050 600  16450 600 
-Wire Notes Line
-	16450 1600 13050 1600
-Wire Notes Line
-	16450 6650 16450 9100
-Wire Notes Line
-	16450 4150 16450 6600
-Wire Notes Line
-	16450 1650 16450 4100
-Wire Notes Line
-	13050 1600 13050 600 
-Wire Notes Line
-	16450 600  16450 1600
-Wire Wire Line
-	4550 1400 4700 1400
-Wire Wire Line
-	4700 1400 4700 1500
-Wire Wire Line
-	4700 1100 4700 1200
-Wire Wire Line
-	4700 1200 4550 1200
-Wire Notes Line
-	3900 600  3900 2000
-Wire Notes Line
-	3900 600  4900 600 
-Wire Notes Line
-	4900 600  4900 2000
-Wire Wire Line
-	5200 1100 5600 1100
-Connection ~ 5600 1100
-Wire Wire Line
-	6450 1100 6700 1100
-Connection ~ 6700 1100
-Connection ~ 7050 1100
-Wire Wire Line
-	7750 1100 7900 1100
-Wire Wire Line
-	5600 1400 5600 1600
-Wire Wire Line
-	5600 1600 6150 1600
-Wire Wire Line
-	7050 1600 7050 1400
-Connection ~ 6150 1600
-Wire Wire Line
-	6700 1400 6700 1600
-Connection ~ 6700 1600
-Wire Wire Line
-	6150 1400 6150 1600
-Wire Notes Line
-	5000 600  5000 2000
-Wire Notes Line
-	5000 2000 8100 2000
-Wire Notes Line
-	8100 2000 8100 600 
-Wire Notes Line
-	8100 600  5000 600 
+	5950 600  2850 600 
 Wire Wire Line
 	3350 9000 3350 8750
 Wire Wire Line
@@ -1295,80 +521,19 @@ Connection ~ 3700 8750
 Wire Wire Line
 	3350 9000 3450 9000
 Wire Wire Line
-	2350 4350 2350 4900
+	3400 5900 3400 6450
 Wire Wire Line
-	2250 4900 2250 4350
+	3300 6450 3300 5900
 Wire Wire Line
-	6100 5050 5900 5050
+	3000 1000 3000 1100
 Wire Wire Line
-	6400 4650 6400 4850
-Wire Wire Line
-	6850 5800 6650 5800
-Wire Wire Line
-	7150 5400 7150 5600
-Wire Wire Line
-	6100 6850 5900 6850
-Wire Wire Line
-	6400 6450 6400 6650
-Wire Wire Line
-	5000 5800 6350 5800
-Wire Wire Line
-	4900 6850 5600 6850
-Wire Wire Line
-	6400 7050 6400 7250
-Wire Wire Line
-	6400 7250 7600 7250
-Connection ~ 7600 7250
-Wire Wire Line
-	7150 6000 7150 6200
-Wire Wire Line
-	7150 6200 7600 6200
-Connection ~ 7600 6200
-Wire Wire Line
-	7600 5250 7600 6200
-Wire Wire Line
-	5950 5400 6700 5400
-Wire Wire Line
-	5950 4450 5950 4650
-Connection ~ 5950 5400
-Connection ~ 5950 4650
-Wire Wire Line
-	6250 6450 6400 6450
-Wire Wire Line
-	7000 5400 7150 5400
-Wire Wire Line
-	6250 4650 6400 4650
-Wire Wire Line
-	6400 5250 7600 5250
-Connection ~ 6400 6450
-Connection ~ 7150 5400
-Connection ~ 6400 4650
-Wire Wire Line
-	14600 7750 14250 7750
-Wire Wire Line
-	14600 5250 14250 5250
-Wire Wire Line
-	5200 1000 5200 1100
-Wire Wire Line
-	7900 1100 7900 1000
-Wire Wire Line
-	900  950  900  1100
+	5700 1100 5700 1000
 Wire Wire Line
 	1350 950  1350 1100
 Wire Wire Line
 	1350 1550 1350 1700
-Wire Wire Line
-	14600 2750 14250 2750
-Wire Wire Line
-	14600 3500 14600 2750
 Wire Notes Line
-	8050 10400 8050 8300
-Wire Notes Line
-	8050 8300 10050 8300
-Wire Notes Line
-	8050 10400 10050 10400
-Wire Notes Line
-	4900 2000 3900 2000
+	2700 2000 1700 2000
 Wire Wire Line
 	900  1550 900  1700
 Wire Notes Line
@@ -1380,381 +545,89 @@ Wire Notes Line
 Wire Notes Line
 	1600 600  600  600 
 Wire Wire Line
-	3000 3200 3550 3200
+	6850 4450 6850 4750
 Wire Wire Line
-	3000 3300 3550 3300
+	7450 4750 7650 4750
 Wire Wire Line
-	8200 9550 8700 9550
+	7650 4450 7650 4750
+Connection ~ 6850 4750
 Wire Wire Line
-	8700 9250 8700 9550
+	6850 4150 6850 4000
 Wire Wire Line
-	9300 9550 9500 9550
+	6850 4000 7050 4000
 Wire Wire Line
-	9500 9250 9500 9550
-Connection ~ 8700 9550
+	7250 4000 7250 4150
+Connection ~ 7050 4000
 Wire Wire Line
-	8700 8950 8700 8800
+	7650 4000 7650 4150
+Connection ~ 7650 4750
 Wire Wire Line
-	8700 8800 8900 8800
+	6850 5100 7050 5100
 Wire Wire Line
-	9100 8800 9100 8950
-Connection ~ 8900 8800
+	7650 5100 7450 5100
 Wire Wire Line
-	9500 8800 9500 8950
-Connection ~ 9500 9550
+	6350 6450 6850 6450
 Wire Wire Line
-	8700 9900 8900 9900
+	6850 6150 6850 6450
 Wire Wire Line
-	9500 9900 9300 9900
-Wire Notes Line
-	10050 10400 10050 8300
-Wire Notes Line
-	10150 10400 10150 8300
-Wire Notes Line
-	10150 8300 12150 8300
-Wire Notes Line
-	10150 10400 12150 10400
+	7450 6450 7650 6450
 Wire Wire Line
-	10300 9550 10800 9550
+	7650 6150 7650 6450
+Connection ~ 6850 6450
 Wire Wire Line
-	10800 9250 10800 9550
+	6850 5850 6850 5700
 Wire Wire Line
-	11400 9550 11600 9550
+	6850 5700 7050 5700
 Wire Wire Line
-	11600 9250 11600 9550
-Connection ~ 10800 9550
+	7250 5700 7250 5850
+Connection ~ 7050 5700
 Wire Wire Line
-	10800 8950 10800 8800
+	7650 5700 7650 5850
+Connection ~ 7650 6450
 Wire Wire Line
-	10800 8800 11000 8800
+	6850 6800 7050 6800
 Wire Wire Line
-	11200 8800 11200 8950
-Connection ~ 11000 8800
-Wire Wire Line
-	11600 8800 11600 8950
-Connection ~ 11600 9550
-Wire Wire Line
-	10800 9900 11000 9900
-Wire Wire Line
-	11600 9900 11400 9900
-Wire Notes Line
-	12150 10400 12150 8300
-Wire Wire Line
-	1800 3000 1050 3000
-Wire Wire Line
-	1800 2900 1050 2900
-Text Label 12150 5650 2    60   ~ 0
+	7650 6800 7450 6800
+Text Label 12300 5350 2    60   ~ 0
 RGB_R
-Text Label 12150 5750 2    60   ~ 0
+Text Label 12300 5450 2    60   ~ 0
 RGB_Y
-Text Label 12150 5850 2    60   ~ 0
+Text Label 12300 5550 2    60   ~ 0
 RGB_G
 $Comp
-L SmartFan-rescue:+5V #PWR023
+L SmartFan-rescue:+5V #PWR019
 U 1 1 5B8B2576
-P 9500 8800
-F 0 "#PWR023" H 9500 8650 50  0001 C CNN
-F 1 "+5V" H 9500 8940 50  0000 C CNN
-F 2 "" H 9500 8800 50  0001 C CNN
-F 3 "" H 9500 8800 50  0001 C CNN
-	1    9500 8800
+P 7650 4000
+F 0 "#PWR019" H 7650 3850 50  0001 C CNN
+F 1 "+5V" H 7650 4140 50  0000 C CNN
+F 2 "" H 7650 4000 50  0001 C CNN
+F 3 "" H 7650 4000 50  0001 C CNN
+	1    7650 4000
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:+5V #PWR029
+L SmartFan-rescue:+5V #PWR020
 U 1 1 5B8B2648
-P 11600 8800
-F 0 "#PWR029" H 11600 8650 50  0001 C CNN
-F 1 "+5V" H 11600 8940 50  0000 C CNN
-F 2 "" H 11600 8800 50  0001 C CNN
-F 3 "" H 11600 8800 50  0001 C CNN
-	1    11600 8800
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:2N3904 Q10
-U 1 1 5B8B4055
-P 9500 1800
-F 0 "Q10" H 9700 1875 50  0000 L CNN
-F 1 "2N3904" H 9700 1800 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 9700 1725 50  0001 L CIN
-F 3 "" H 9500 1800 50  0001 L CNN
-	1    9500 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:2N3904 Q11
-U 1 1 5B8B41D3
-P 10300 1500
-F 0 "Q11" H 10500 1575 50  0000 L CNN
-F 1 "2N3904" H 10500 1500 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 10500 1425 50  0001 L CIN
-F 3 "" H 10300 1500 50  0001 L CNN
-	1    10300 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R28
-U 1 1 5B8B4319
-P 9850 1500
-F 0 "R28" V 9930 1500 50  0000 C CNN
-F 1 "330" V 9850 1500 50  0000 C CNN
-F 2 "" V 9780 1500 50  0001 C CNN
-F 3 "" H 9850 1500 50  0001 C CNN
-	1    9850 1500
-	0    1    1    0   
-$EndComp
-$Comp
-L SmartFan-rescue:R R24
-U 1 1 5B8B4482
-P 9050 1800
-F 0 "R24" V 9130 1800 50  0000 C CNN
-F 1 "330" V 9050 1800 50  0000 C CNN
-F 2 "" V 8980 1800 50  0001 C CNN
-F 3 "" H 9050 1800 50  0001 C CNN
-	1    9050 1800
-	0    1    1    0   
-$EndComp
-$Comp
-L SmartFan-rescue:R R27
-U 1 1 5B8B4540
-P 9600 1100
-F 0 "R27" V 9680 1100 50  0000 C CNN
-F 1 "R" V 9600 1100 50  0000 C CNN
-F 2 "" V 9530 1100 50  0001 C CNN
-F 3 "" H 9600 1100 50  0001 C CNN
-	1    9600 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R29
-U 1 1 5B8B475E
-P 10400 1100
-F 0 "R29" V 10480 1100 50  0000 C CNN
-F 1 "R" V 10400 1100 50  0000 C CNN
-F 2 "" V 10330 1100 50  0001 C CNN
-F 3 "" H 10400 1100 50  0001 C CNN
-	1    10400 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:+3V3 #PWR024
-U 1 1 5B8B4BD9
-P 10000 850
-F 0 "#PWR024" H 10000 700 50  0001 C CNN
-F 1 "+3V3" H 10000 990 50  0000 C CNN
-F 2 "" H 10000 850 50  0001 C CNN
-F 3 "" H 10000 850 50  0001 C CNN
-	1    10000 850 
+P 7650 5700
+F 0 "#PWR020" H 7650 5550 50  0001 C CNN
+F 1 "+5V" H 7650 5840 50  0000 C CNN
+F 2 "" H 7650 5700 50  0001 C CNN
+F 3 "" H 7650 5700 50  0001 C CNN
+	1    7650 5700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8300 1800 8900 1800
+	3400 1100 3650 1100
 Wire Wire Line
-	9200 1800 9300 1800
+	4500 1100 4850 1100
 Wire Wire Line
-	9700 1500 9600 1500
-Connection ~ 9600 1500
+	4850 1100 5150 1100
 Wire Wire Line
-	10000 1500 10100 1500
+	3950 1600 4500 1600
 Wire Wire Line
-	9600 950  9600 850 
+	3950 1600 3950 1700
 Wire Wire Line
-	9600 850  10000 850 
-Wire Wire Line
-	10400 850  10400 950 
-Connection ~ 10000 850 
-$Comp
-L SmartFan-rescue:GND #PWR026
-U 1 1 5B8B5916
-P 10000 2100
-F 0 "#PWR026" H 10000 1850 50  0001 C CNN
-F 1 "GND" H 10000 1950 50  0000 C CNN
-F 2 "" H 10000 2100 50  0001 C CNN
-F 3 "" H 10000 2100 50  0001 C CNN
-	1    10000 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9600 2000 9600 2100
-Wire Wire Line
-	9600 2100 10000 2100
-Wire Wire Line
-	10400 2100 10400 1700
-Connection ~ 10000 2100
-Wire Wire Line
-	10400 1250 10400 1300
-Wire Wire Line
-	9600 1250 9600 1500
-Text Label 8300 1800 0    60   ~ 0
-MCP_INTA_5v
-Wire Wire Line
-	10400 1300 11050 1300
-Text Label 11050 1300 2    60   ~ 0
-MCP_INTA
-$Comp
-L SmartFan-rescue:2N3904 Q12
-U 1 1 5B8B7467
-P 11150 2800
-F 0 "Q12" H 11350 2875 50  0000 L CNN
-F 1 "2N3904" H 11350 2800 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 11350 2725 50  0001 L CIN
-F 3 "" H 11150 2800 50  0001 L CNN
-	1    11150 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:2N3904 Q14
-U 1 1 5B8B746D
-P 11950 2500
-F 0 "Q14" H 12150 2575 50  0000 L CNN
-F 1 "2N3904" H 12150 2500 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 12150 2425 50  0001 L CIN
-F 3 "" H 11950 2500 50  0001 L CNN
-	1    11950 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R34
-U 1 1 5B8B7473
-P 11500 2500
-F 0 "R34" V 11580 2500 50  0000 C CNN
-F 1 "330" V 11500 2500 50  0000 C CNN
-F 2 "" V 11430 2500 50  0001 C CNN
-F 3 "" H 11500 2500 50  0001 C CNN
-	1    11500 2500
-	0    1    1    0   
-$EndComp
-$Comp
-L SmartFan-rescue:R R30
-U 1 1 5B8B7479
-P 10700 2800
-F 0 "R30" V 10780 2800 50  0000 C CNN
-F 1 "330" V 10700 2800 50  0000 C CNN
-F 2 "" V 10630 2800 50  0001 C CNN
-F 3 "" H 10700 2800 50  0001 C CNN
-	1    10700 2800
-	0    1    1    0   
-$EndComp
-$Comp
-L SmartFan-rescue:R R33
-U 1 1 5B8B747F
-P 11250 2100
-F 0 "R33" V 11330 2100 50  0000 C CNN
-F 1 "R" V 11250 2100 50  0000 C CNN
-F 2 "" V 11180 2100 50  0001 C CNN
-F 3 "" H 11250 2100 50  0001 C CNN
-	1    11250 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:R R36
-U 1 1 5B8B7485
-P 12050 2100
-F 0 "R36" V 12130 2100 50  0000 C CNN
-F 1 "R" V 12050 2100 50  0000 C CNN
-F 2 "" V 11980 2100 50  0001 C CNN
-F 3 "" H 12050 2100 50  0001 C CNN
-	1    12050 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:+3V3 #PWR030
-U 1 1 5B8B748B
-P 11650 1850
-F 0 "#PWR030" H 11650 1700 50  0001 C CNN
-F 1 "+3V3" H 11650 1990 50  0000 C CNN
-F 2 "" H 11650 1850 50  0001 C CNN
-F 3 "" H 11650 1850 50  0001 C CNN
-	1    11650 1850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9950 2800 10550 2800
-Wire Wire Line
-	10850 2800 10950 2800
-Wire Wire Line
-	11350 2500 11250 2500
-Connection ~ 11250 2500
-Wire Wire Line
-	11650 2500 11750 2500
-Wire Wire Line
-	11250 1950 11250 1850
-Wire Wire Line
-	11250 1850 11650 1850
-Wire Wire Line
-	12050 1850 12050 1950
-Connection ~ 11650 1850
-$Comp
-L SmartFan-rescue:GND #PWR031
-U 1 1 5B8B749A
-P 11650 3100
-F 0 "#PWR031" H 11650 2850 50  0001 C CNN
-F 1 "GND" H 11650 2950 50  0000 C CNN
-F 2 "" H 11650 3100 50  0001 C CNN
-F 3 "" H 11650 3100 50  0001 C CNN
-	1    11650 3100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11250 3000 11250 3100
-Wire Wire Line
-	11250 3100 11650 3100
-Wire Wire Line
-	12050 3100 12050 2700
-Connection ~ 11650 3100
-Wire Wire Line
-	12050 2250 12050 2300
-Wire Wire Line
-	11250 2250 11250 2500
-Text Label 9950 2800 0    60   ~ 0
-MCP_INTB_5v
-Wire Wire Line
-	12050 2300 12700 2300
-Text Label 12700 2300 2    60   ~ 0
-MCP_INTB
-Wire Notes Line
-	8200 600  12900 600 
-Wire Notes Line
-	12900 600  12900 3350
-Wire Notes Line
-	12900 3350 8200 3350
-Wire Notes Line
-	8200 3350 8200 600 
-Text Label 1050 2900 0    60   ~ 0
-MCP_INTA
-Text Label 1050 3000 0    60   ~ 0
-MCP_INTB
-Wire Wire Line
-	14900 1950 15450 1950
-Wire Wire Line
-	14900 1950 14900 2250
-Wire Wire Line
-	14900 2750 14900 3300
-Wire Wire Line
-	14900 5250 14900 5800
-Wire Wire Line
-	14900 4450 14900 4750
-Wire Wire Line
-	14900 4450 15450 4450
-Wire Wire Line
-	14900 7750 14900 8300
-Wire Wire Line
-	14900 6950 14900 7250
-Wire Wire Line
-	14900 6950 15450 6950
-Wire Wire Line
-	5600 1100 5850 1100
-Wire Wire Line
-	6700 1100 7050 1100
-Wire Wire Line
-	7050 1100 7350 1100
-Wire Wire Line
-	6150 1600 6700 1600
-Wire Wire Line
-	6150 1600 6150 1700
-Wire Wire Line
-	6700 1600 7050 1600
+	4500 1600 4850 1600
 Wire Wire Line
 	4050 9200 4050 9300
 Wire Wire Line
@@ -1774,141 +647,86 @@ Wire Wire Line
 Wire Wire Line
 	3700 8750 4050 8750
 Wire Wire Line
-	7600 7250 7600 7350
+	6850 4750 7050 4750
 Wire Wire Line
-	7600 6200 7600 7250
+	6850 4750 6850 5100
 Wire Wire Line
-	5950 5400 5950 6450
+	7050 4000 7250 4000
 Wire Wire Line
-	5950 4650 5950 5400
+	7650 4750 7650 5100
 Wire Wire Line
-	6400 6450 8300 6450
+	6850 6450 7050 6450
 Wire Wire Line
-	7150 5400 8300 5400
+	6850 6450 6850 6800
 Wire Wire Line
-	6400 4650 8300 4650
+	7050 5700 7250 5700
 Wire Wire Line
-	8700 9550 8900 9550
-Wire Wire Line
-	8700 9550 8700 9900
-Wire Wire Line
-	8900 8800 9100 8800
-Wire Wire Line
-	9500 9550 9900 9550
-Wire Wire Line
-	9500 9550 9500 9900
-Wire Wire Line
-	10800 9550 11000 9550
-Wire Wire Line
-	10800 9550 10800 9900
-Wire Wire Line
-	11000 8800 11200 8800
-Wire Wire Line
-	11600 9550 12000 9550
-Wire Wire Line
-	11600 9550 11600 9900
-Wire Wire Line
-	9600 1500 9600 1600
-Wire Wire Line
-	10000 850  10400 850 
-Wire Wire Line
-	10000 2100 10400 2100
-Wire Wire Line
-	11250 2500 11250 2600
-Wire Wire Line
-	11650 1850 12050 1850
-Wire Wire Line
-	11650 3100 12050 3100
+	7650 6450 7650 6800
 $Comp
-L hackaBLE:hackaBLE_0.3 U5
+L hackaBLE:hackaBLE_0.3 U1
 U 1 1 5CFBC4A5
-P 2400 3250
-F 0 "U5" H 2400 3915 50  0000 C CNN
-F 1 "hackaBLE_0.3" H 2400 3824 50  0000 C CNN
-F 2 "" H 2400 3250 50  0001 C CNN
-F 3 "" H 2400 3250 50  0001 C CNN
-	1    2400 3250
+P 3450 4800
+F 0 "U1" H 3450 5465 50  0000 C CNN
+F 1 "hackaBLE_0.3" H 3450 5374 50  0000 C CNN
+F 2 "hackaBLE_0:hackaBLE_0.3" H 3450 4800 50  0001 C CNN
+F 3 "" H 3450 4800 50  0001 C CNN
+	1    3450 4800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3000 2900 5100 2900
-NoConn ~ 1800 3700
 $Comp
-L SmartFan-rescue:+3.3V #PWR012
+L SmartFan-rescue:+3.3V #PWR010
 U 1 1 5D24F3B8
-P 2550 4900
-F 0 "#PWR012" H 2550 4750 50  0001 C CNN
-F 1 "+3.3V" H 2550 5040 50  0000 C CNN
-F 2 "" H 2550 4900 50  0001 C CNN
-F 3 "" H 2550 4900 50  0001 C CNN
-	1    2550 4900
+P 3600 6450
+F 0 "#PWR010" H 3600 6300 50  0001 C CNN
+F 1 "+3.3V" H 3600 6590 50  0000 C CNN
+F 2 "" H 3600 6450 50  0001 C CNN
+F 3 "" H 3600 6450 50  0001 C CNN
+	1    3600 6450
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2550 4350 2550 4850
 $Comp
 L SmartFan-rescue:GND #PWR014
 U 1 1 5D262090
-P 3200 4500
-F 0 "#PWR014" H 3200 4250 50  0001 C CNN
-F 1 "GND" H 3200 4350 50  0000 C CNN
-F 2 "" H 3200 4500 50  0001 C CNN
-F 3 "" H 3200 4500 50  0001 C CNN
-	1    3200 4500
+P 4250 6050
+F 0 "#PWR014" H 4250 5800 50  0001 C CNN
+F 1 "GND" H 4250 5900 50  0000 C CNN
+F 2 "" H 4250 6050 50  0001 C CNN
+F 3 "" H 4250 6050 50  0001 C CNN
+	1    4250 6050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3000 3700 3200 3700
+	4050 5250 4250 5250
 Wire Wire Line
-	3200 3700 3200 4400
+	4250 5250 4250 5950
 Wire Wire Line
-	2450 4350 2450 4400
+	3500 5900 3500 5950
 Wire Wire Line
-	2450 4400 3200 4400
-Connection ~ 3200 4400
+	3500 5950 4250 5950
+Connection ~ 4250 5950
 Wire Wire Line
-	3200 4400 3200 4500
-Wire Wire Line
-	3000 3500 3400 3500
-Wire Wire Line
-	3400 3500 3400 4850
-Wire Wire Line
-	3400 4850 2550 4850
-Connection ~ 2550 4850
-Wire Wire Line
-	2550 4850 2550 4900
+	4250 5950 4250 6050
 $Comp
-L SmartFan-rescue:+5V #PWR021
+L SmartFan-rescue:+5V #PWR015
 U 1 1 5D29C6A2
-P 3950 3550
-F 0 "#PWR021" H 3950 3400 50  0001 C CNN
-F 1 "+5V" H 3950 3690 50  0000 C CNN
-F 2 "" H 3950 3550 50  0001 C CNN
-F 3 "" H 3950 3550 50  0001 C CNN
-	1    3950 3550
+P 5000 5100
+F 0 "#PWR015" H 5000 4950 50  0001 C CNN
+F 1 "+5V" H 5000 5240 50  0000 C CNN
+F 2 "" H 5000 5100 50  0001 C CNN
+F 3 "" H 5000 5100 50  0001 C CNN
+	1    5000 5100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 3550 3950 3600
+	5000 5100 5000 5150
 Wire Wire Line
-	3950 3600 3000 3600
+	5000 5150 4050 5150
 NoConn ~ 3450 9700
 $Comp
-L SmartFan-rescue:Conn_02x10_Odd_Even J?
-U 1 1 5D326262
-P 1450 9350
-F 0 "J?" H 1500 9850 50  0000 C CNN
-F 1 "DISPLAY" H 1500 8750 50  0000 C CNN
-F 2 "Connectors_IDC:IDC-Header_2x10_Pitch2.54mm_Straight" H 1450 9350 50  0001 C CNN
-F 3 "" H 1450 9350 50  0001 C CNN
-	1    1450 9350
-	1    0    0    -1  
-$EndComp
-$Comp
-L SmartFan-rescue:GND #PWR?
+L SmartFan-rescue:GND #PWR06
 U 1 1 5D32626A
 P 1850 9950
-F 0 "#PWR?" H 1850 9700 50  0001 C CNN
+F 0 "#PWR06" H 1850 9700 50  0001 C CNN
 F 1 "GND" H 1850 9800 50  0000 C CNN
 F 2 "" H 1850 9950 50  0001 C CNN
 F 3 "" H 1850 9950 50  0001 C CNN
@@ -1930,10 +748,10 @@ Wire Wire Line
 Wire Wire Line
 	1750 9850 1850 9850
 $Comp
-L SmartFan-rescue:+5V #PWR?
+L SmartFan-rescue:+5V #PWR05
 U 1 1 5D355A47
 P 1850 8850
-F 0 "#PWR?" H 1850 8700 50  0001 C CNN
+F 0 "#PWR05" H 1850 8700 50  0001 C CNN
 F 1 "+5V" H 1850 8990 50  0000 C CNN
 F 2 "" H 1850 8850 50  0001 C CNN
 F 3 "" H 1850 8850 50  0001 C CNN
@@ -1961,9 +779,9 @@ Wire Wire Line
 Wire Wire Line
 	1750 9450 2350 9450
 Text Label 2350 9350 2    50   ~ 0
-BTLE_LED_OUT
+BTLE_LED
 Text Label 2350 9450 2    50   ~ 0
-ANT_LED_OUT
+ANT_LED
 Wire Wire Line
 	1250 8950 700  8950
 Wire Wire Line
@@ -1972,140 +790,92 @@ Text Label 700  8950 0    50   ~ 0
 SDA_5v
 Text Label 700  9050 0    50   ~ 0
 SCL_5v
-Wire Wire Line
-	14900 3700 14900 3850
-Wire Wire Line
-	14900 6200 14900 6350
-Wire Wire Line
-	14900 8700 14900 8850
-Wire Wire Line
-	1250 9750 700  9750
-Wire Wire Line
-	1250 9850 700  9850
-Text Label 700  9750 0    50   ~ 0
-MCP_INTA_5v
-Text Label 700  9850 0    50   ~ 0
-MCP_INTB_5v
 $Comp
-L Interface_Expansion:MCP23017_SP U?
+L Interface_Expansion:MCP23017_SP U3
 U 1 1 5CFD898F
-P 10900 5550
-F 0 "U?" H 10600 6550 50  0000 C CNN
-F 1 "MCP23017_SP" H 11300 6550 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W7.62mm" H 11100 4550 50  0001 L CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 11100 4450 50  0001 L CNN
-	1    10900 5550
+P 11050 5250
+F 0 "U3" H 10750 6250 50  0000 C CNN
+F 1 "MCP23017_SP" H 11450 6250 50  0000 C CNN
+F 2 "Housings_DIP:DIP-28_W7.62mm_Socket" H 11250 4250 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 11250 4150 50  0001 L CNN
+	1    11050 5250
 	1    0    0    -1  
 $EndComp
 $Comp
-L SmartFan-rescue:GND #PWR?
+L SmartFan-rescue:GND #PWR021
 U 1 1 5CFF21B8
-P 9900 6550
-F 0 "#PWR?" H 9900 6300 50  0001 C CNN
-F 1 "GND" H 9900 6400 50  0000 C CNN
-F 2 "" H 9900 6550 50  0001 C CNN
-F 3 "" H 9900 6550 50  0001 C CNN
-	1    9900 6550
+P 10050 6250
+F 0 "#PWR021" H 10050 6000 50  0001 C CNN
+F 1 "GND" H 10050 6100 50  0000 C CNN
+F 2 "" H 10050 6250 50  0001 C CNN
+F 3 "" H 10050 6250 50  0001 C CNN
+	1    10050 6250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10200 6150 9900 6150
+	10350 5850 10050 5850
 Wire Wire Line
-	9900 6150 9900 6250
+	10050 5850 10050 5950
 Wire Wire Line
-	10200 6250 9900 6250
-Connection ~ 9900 6250
+	10350 5950 10050 5950
+Connection ~ 10050 5950
 Wire Wire Line
-	9900 6250 9900 6350
+	10050 5950 10050 6050
 Wire Wire Line
-	10200 6350 9900 6350
-Connection ~ 9900 6350
+	10350 6050 10050 6050
+Connection ~ 10050 6050
 Wire Wire Line
-	9900 6350 9900 6550
+	10050 6050 10050 6250
 Wire Wire Line
-	10200 4750 9750 4750
-Wire Wire Line
-	10200 4850 9750 4850
-Text Label 9750 4750 0    50   ~ 0
-SDA_5v
-Text Label 9750 4850 0    50   ~ 0
-SCL_5v
-Wire Wire Line
-	10200 5350 9750 5350
-Wire Wire Line
-	10200 5450 9750 5450
-Text Label 9750 5350 0    50   ~ 0
-MCP_INTA_5v
-Text Label 9750 5450 0    50   ~ 0
-MCB_INTB_5v
+	10350 4550 9900 4550
 $Comp
-L SmartFan-rescue:+5V #PWR?
+L SmartFan-rescue:+5V #PWR022
 U 1 1 5D091E18
-P 10900 4200
-F 0 "#PWR?" H 10900 4050 50  0001 C CNN
-F 1 "+5V" H 10900 4340 50  0000 C CNN
-F 2 "" H 10900 4200 50  0001 C CNN
-F 3 "" H 10900 4200 50  0001 C CNN
-	1    10900 4200
+P 11050 3900
+F 0 "#PWR022" H 11050 3750 50  0001 C CNN
+F 1 "+5V" H 11050 4040 50  0000 C CNN
+F 2 "" H 11050 3900 50  0001 C CNN
+F 3 "" H 11050 3900 50  0001 C CNN
+	1    11050 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10900 4450 10900 4350
+	11050 4150 11050 4050
 $Comp
-L SmartFan-rescue:+5V #PWR?
+L SmartFan-rescue:+5V #PWR023
 U 1 1 5D0A99D5
-P 10900 7100
-F 0 "#PWR?" H 10900 6950 50  0001 C CNN
-F 1 "+5V" H 10900 7240 50  0000 C CNN
-F 2 "" H 10900 7100 50  0001 C CNN
-F 3 "" H 10900 7100 50  0001 C CNN
-	1    10900 7100
+P 11050 6800
+F 0 "#PWR023" H 11050 6650 50  0001 C CNN
+F 1 "+5V" H 11050 6940 50  0000 C CNN
+F 2 "" H 11050 6800 50  0001 C CNN
+F 3 "" H 11050 6800 50  0001 C CNN
+	1    11050 6800
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	10900 6650 10900 7100
+	11050 6350 11050 6800
 Wire Wire Line
-	10200 5650 9400 5650
+	10350 5350 9550 5350
 Wire Wire Line
-	9400 5650 9400 4350
+	9550 5350 9550 4050
 Wire Wire Line
-	9400 4350 10900 4350
-Connection ~ 10900 4350
+	9550 4050 11050 4050
+Connection ~ 11050 4050
 Wire Wire Line
-	10900 4350 10900 4200
+	11050 4050 11050 3900
 Wire Wire Line
-	11600 5650 12150 5650
+	11750 5350 12300 5350
 Wire Wire Line
-	11600 5750 12150 5750
+	11750 5450 12300 5450
 Wire Wire Line
-	11600 5850 12150 5850
+	11750 5550 12300 5550
 Wire Wire Line
-	11600 5950 12150 5950
+	11750 5650 12300 5650
 Wire Wire Line
-	11600 6050 12150 6050
-Wire Wire Line
-	11600 4750 12150 4750
-Wire Wire Line
-	11600 4850 12150 4850
-Wire Wire Line
-	11600 4950 12150 4950
-Wire Wire Line
-	11600 5050 12150 5050
-Wire Wire Line
-	11600 5150 12150 5150
-Text Label 12150 4750 2    50   ~ 0
-ROT_ENC_A
-Text Label 12150 4850 2    50   ~ 0
-ROT_ENC_B
-Text Label 12150 4950 2    50   ~ 0
-ROT_ENC_C
-Text Label 12150 5050 2    50   ~ 0
-ROT_ENC_SW1
-Text Label 12150 5150 2    50   ~ 0
-ROT_ENC_SW2
-NoConn ~ 1800 3300
-NoConn ~ 1800 3400
-NoConn ~ 1800 3500
+	11750 5750 12300 5750
+NoConn ~ 2850 4850
+NoConn ~ 2850 4950
+NoConn ~ 2850 5050
 Wire Notes Line
 	2650 10400 2650 8300
 Wire Notes Line
@@ -2118,18 +888,151 @@ Wire Wire Line
 	2750 9400 3450 9400
 Wire Wire Line
 	2750 9300 3450 9300
+NoConn ~ 2850 4650
+NoConn ~ 2850 4750
 Wire Wire Line
-	5000 3000 5000 5800
+	4050 4450 4600 4450
 Wire Wire Line
-	3000 3000 5000 3000
+	4050 4550 4600 4550
 Wire Wire Line
-	4900 3100 4900 6850
+	4050 4650 4600 4650
+Text Label 4600 4450 2    50   ~ 0
+ROT_ENC_A
+Text Label 4600 4550 2    50   ~ 0
+ROT_ENC_B
+Text Label 4600 4650 2    50   ~ 0
+ROT_ENC_C
 Wire Wire Line
-	3000 3100 4900 3100
+	2850 5150 2100 5150
 Wire Wire Line
-	5100 5050 5100 2900
+	2850 5250 2100 5250
+Text Label 2100 5150 0    50   ~ 0
+ROT_ENC_SW1
+Text Label 2100 5250 0    50   ~ 0
+ROT_ENC_SW2
+Text Label 12300 4450 2    50   ~ 0
+HI_SPD_EN
+Text Label 12300 4550 2    50   ~ 0
+MED_SPD_EN
+Text Label 12300 4650 2    50   ~ 0
+LO_SPD_EN
 Wire Wire Line
-	5100 5050 5600 5050
-NoConn ~ 1800 3100
-NoConn ~ 1800 3200
+	7650 4750 9900 4750
+Wire Wire Line
+	7650 6450 8700 6450
+Wire Wire Line
+	8700 4450 10350 4450
+Wire Wire Line
+	4050 4850 6350 4850
+Wire Wire Line
+	4050 4750 6850 4750
+Wire Wire Line
+	9900 4550 9900 4750
+NoConn ~ 11750 4950
+NoConn ~ 11750 5050
+NoConn ~ 11750 5150
+NoConn ~ 11750 5850
+NoConn ~ 11750 5950
+NoConn ~ 11750 6050
+$Comp
+L Connector:Screw_Terminal_01x05 J4
+U 1 1 5D7DD587
+P 14800 4550
+F 0 "J4" H 14880 4592 50  0000 L CNN
+F 1 "Relay_Terminal" H 14880 4501 50  0000 L CNN
+F 2 "TerminalBlock_RND:TerminalBlock_RND_205-00290_Pitch5.08mm" H 14800 4550 50  0001 C CNN
+F 3 "~" H 14800 4550 50  0001 C CNN
+	1    14800 4550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 11750 4750
+NoConn ~ 11750 4850
+NoConn ~ 10350 5050
+NoConn ~ 10350 5150
+Wire Wire Line
+	11750 4450 14600 4450
+Wire Wire Line
+	11750 4550 14600 4550
+Wire Wire Line
+	11750 4650 14600 4650
+$Comp
+L power:+5V #PWR024
+U 1 1 5D8107B6
+P 14450 4150
+F 0 "#PWR024" H 14450 4000 50  0001 C CNN
+F 1 "+5V" H 14465 4323 50  0000 C CNN
+F 2 "" H 14450 4150 50  0001 C CNN
+F 3 "" H 14450 4150 50  0001 C CNN
+	1    14450 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5D810856
+P 14450 4950
+F 0 "#PWR025" H 14450 4700 50  0001 C CNN
+F 1 "GND" H 14455 4777 50  0000 C CNN
+F 2 "" H 14450 4950 50  0001 C CNN
+F 3 "" H 14450 4950 50  0001 C CNN
+	1    14450 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14600 4750 14450 4750
+Wire Wire Line
+	14450 4750 14450 4950
+Wire Wire Line
+	14600 4350 14450 4350
+Wire Wire Line
+	14450 4350 14450 4150
+Wire Wire Line
+	8700 4450 8700 6450
+Wire Wire Line
+	6350 4850 6350 6450
+NoConn ~ 1250 9150
+NoConn ~ 1250 9250
+Text Label 8900 4450 0    50   ~ 0
+SDA_5v
+Text Label 8900 4750 0    50   ~ 0
+SCL_5v
+NoConn ~ 1750 9750
+NoConn ~ 1750 9650
+NoConn ~ 1750 9550
+NoConn ~ 1250 9850
+NoConn ~ 2850 4450
+NoConn ~ 2850 4550
+$Comp
+L SmartFan-rescue:Conn_02x10_Odd_Even J1
+U 1 1 5D326262
+P 1450 9350
+F 0 "J1" H 1500 9850 50  0000 C CNN
+F 1 "DISPLAY" H 1500 8750 50  0000 C CNN
+F 2 "Connectors_IDC:IDC-Header_2x10_Pitch2.54mm_Straight" H 1450 9350 50  0001 C CNN
+F 3 "" H 1450 9350 50  0001 C CNN
+	1    1450 9350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 9350 700  9350
+Wire Wire Line
+	1250 9450 700  9450
+Wire Wire Line
+	1250 9550 700  9550
+Wire Wire Line
+	1250 9650 700  9650
+Wire Wire Line
+	1250 9750 700  9750
+Text Label 700  9350 0    50   ~ 0
+ROT_ENC_A
+Text Label 700  9450 0    50   ~ 0
+ROT_ENC_B
+Text Label 700  9550 0    50   ~ 0
+ROT_ENC_C
+Text Label 700  9650 0    50   ~ 0
+ROT_ENC_SW1
+Text Label 700  9750 0    50   ~ 0
+ROT_ENC_SW2
+Wire Wire Line
+	3600 5900 3600 6450
+NoConn ~ 4050 5050
 $EndSCHEMATC

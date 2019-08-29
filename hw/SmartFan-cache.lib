@@ -1,6 +1,41 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# Connector_Screw_Terminal_01x05
+#
+DEF Connector_Screw_Terminal_01x05 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Connector_Screw_Terminal_01x05" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TerminalBlock*:*
+$ENDFPLIST
+DRAW
+C 0 -200 25 1 1 6 N
+C 0 -100 25 1 1 6 N
+C 0 0 25 1 1 6 N
+C 0 100 25 1 1 6 N
+C 0 200 25 1 1 6 N
+S -50 250 50 -250 1 1 10 f
+P 2 1 1 6 -21 -187 13 -220 N
+P 2 1 1 6 -21 -87 13 -120 N
+P 2 1 1 6 -21 13 13 -20 N
+P 2 1 1 6 -21 113 13 80 N
+P 2 1 1 6 -21 213 13 180 N
+P 2 1 1 6 -14 -180 20 -213 N
+P 2 1 1 6 -14 -80 20 -113 N
+P 2 1 1 6 -14 20 20 -13 N
+P 2 1 1 6 -14 120 20 87 N
+P 2 1 1 6 -14 220 20 187 N
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Interface_Expansion_MCP23017_SP
 #
 DEF Interface_Expansion_MCP23017_SP U 0 40 Y Y 1 F N
@@ -59,21 +94,6 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# SmartFan-rescue_+3V3
-#
-DEF SmartFan-rescue_+3V3 #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "SmartFan-rescue_+3V3" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
 # SmartFan-rescue_+5V
 #
 DEF SmartFan-rescue_+5V #PWR 0 0 Y Y 1 F P
@@ -101,30 +121,6 @@ P 2 0 1 0 -30 50 0 100 N
 P 2 0 1 0 0 0 0 100 N
 P 2 0 1 0 0 100 30 50 N
 X +9V 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# SmartFan-rescue_1N4148W-7-F
-#
-DEF SmartFan-rescue_1N4148W-7-F D 0 0 N N 1 F N
-F0 "D" 0 100 60 H V C BNN
-F1 "SmartFan-rescue_1N4148W-7-F" 0 -100 60 H V C CNN
-F2 "digikey-footprints:SOD-123" 200 200 60 H I L CNN
-F3 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" 200 300 60 H I L CNN
-F4 "1N4148W-FDICT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "1N4148W-7-F" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Diodes - Rectifiers - Single" 200 700 60 H I L CNN "Family"
-F8 "https://www.diodes.com/assets/Datasheets/ds30086.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/diodes-incorporated/1N4148W-7-F/1N4148W-FDICT-ND/815280" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "DIODE GEN PURP 100V 300MA SOD123" 200 1000 60 H I L CNN "Description"
-F11 "Diodes Incorporated" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-P 2 0 1 0 50 50 50 -50 N
-P 4 0 1 0 -50 50 -50 -50 50 0 -50 50 F
-X ~ A -200 0 150 R 50 50 1 1 P
-X ~ K 200 0 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -213,30 +209,6 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# SmartFan-rescue_Conn_02x02_Counter_Clockwise
-#
-DEF SmartFan-rescue_Conn_02x02_Counter_Clockwise J 0 40 Y N 1 F N
-F0 "J" 50 100 50 H V C CNN
-F1 "SmartFan-rescue_Conn_02x02_Counter_Clockwise" 50 -200 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*2x??x*mm*
- Connector*:*2x???Pitch*
-$ENDFPLIST
-DRAW
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 50 150 -150 1 1 10 f
-S 150 -95 100 -105 1 1 6 N
-S 150 5 100 -5 1 1 6 N
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
-X Pin_3 3 300 -100 150 L 50 50 1 1 P
-X Pin_4 4 300 0 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # SmartFan-rescue_Conn_02x10_Odd_Even
 #
 DEF SmartFan-rescue_Conn_02x10_Odd_Even J 0 40 Y N 1 F N
@@ -297,43 +269,6 @@ X Pin_9 9 -200 0 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# SmartFan-rescue_G5LE-14_DC5
-#
-DEF SmartFan-rescue_G5LE-14_DC5 RLY 0 0 Y N 1 F N
-F0 "RLY" -340 270 50 H V C CNN
-F1 "SmartFan-rescue_G5LE-14_DC5" -350 200 50 V V R CNN
-F2 "digikey-footprints:Relay_THT_G5LE-14" 200 200 50 H I L CNN
-F3 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5le.pdf" 200 300 60 H I L CNN
-F4 "Z1011-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "G5LE-14 DC5" 200 500 60 H I L CNN "MPN"
-F6 "Relays" 200 600 60 H I L CNN "Category"
-F7 "Power Relays, Over 2 Amps" 200 700 60 H I L CNN "Family"
-F8 "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5le.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/omron-electronics-inc-emc-div/G5LE-14-DC5/Z1011-ND/280371" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "RELAY GEN PURPOSE SPDT 10A 5V" 200 1000 60 H I L CNN "Description"
-F11 "Omron Electronics Inc-EMC Div" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-C 0 90 14 0 1 0 F
-C 100 -80 14 0 1 0 F
-C 200 90 14 0 1 0 F
-S -300 200 300 -200 0 1 0 f
-S -280 40 -120 -40 0 1 0 N
-P 2 0 1 0 -260 -40 -140 40 N
-P 2 0 1 0 -200 -200 -200 -40 N
-P 2 0 1 0 -200 200 -200 40 N
-P 2 0 1 0 0 200 0 100 N
-P 2 0 1 0 100 -200 100 -90 N
-P 2 0 1 0 100 -70 190 100 N
-P 2 0 1 0 200 200 200 100 N
-X COM 1 100 -300 100 U 50 50 1 1 P
-X COIL 2 -200 300 100 D 50 50 1 1 P
-X NO 3 0 300 100 D 50 50 1 1 P
-X NC 4 200 300 100 D 50 50 1 1 P
-X COIL 5 -200 -300 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # SmartFan-rescue_GND
 #
 DEF SmartFan-rescue_GND #PWR 0 0 Y Y 1 F P
@@ -371,39 +306,6 @@ X OUT 3 300 0 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# SmartFan-rescue_LTV-816S-TA1
-#
-DEF SmartFan-rescue_LTV-816S-TA1 U 0 40 Y Y 1 F N
-F0 "U" 0 200 60 H V C CNN
-F1 "SmartFan-rescue_LTV-816S-TA1" 0 -225 60 H V C CNN
-F2 "digikey-footprints:SMD-4_4.6x7.62mm_P2.54mm" 200 200 60 H I L CNN
-F3 "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf" 200 300 60 V I L CNN
-F4 "160-1892-1-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "LTV-816S-TA1" 200 500 60 H I L CNN "MPN"
-F6 "Isolators" 200 600 60 H I L CNN "Category"
-F7 "Optoisolators - Transistor, Photovoltaic Output" 200 700 60 H I L CNN "Family"
-F8 "https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/LTV-816_826_846.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/lite-on-inc/LTV-816S-TA1/160-1892-1-ND/3306438" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "OPTOISOLATR 5KV TRANSISTOR 4-SMD" 200 1000 60 H I L CNN "Description"
-F11 "Lite-On Inc." 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-S -150 150 150 -150 0 1 0 f
-P 2 0 1 0 -100 -25 -50 -25 N
-P 2 0 1 0 25 75 25 -75 N
-P 3 0 1 0 -150 -100 -75 -100 -75 -25 N
-P 3 0 1 0 -150 100 -75 100 -75 25 N
-P 3 0 1 0 25 -50 100 -100 150 -100 N
-P 3 0 1 0 25 50 100 100 150 100 N
-P 4 0 1 0 -100 25 -50 25 -75 -25 -100 25 F
-P 4 0 1 0 85 -90 70 -65 55 -85 85 -90 F
-X ~ 1 -300 100 150 R 50 50 1 1 P
-X ~ 2 -300 -100 150 R 50 50 1 1 P
-X ~ 3 300 -100 150 L 50 50 1 1 P
-X ~ 4 300 100 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # SmartFan-rescue_MBR0540T1G
 #
 DEF SmartFan-rescue_MBR0540T1G D 0 0 N N 1 F N
@@ -427,66 +329,6 @@ P 4 0 1 0 50 -50 50 -75 75 -75 75 -50 N
 P 4 0 1 0 50 50 50 75 25 75 25 50 N
 X ~ A -200 0 150 R 50 50 1 1 P
 X ~ K 200 0 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# SmartFan-rescue_MMBT2222A-7-F
-#
-DEF SmartFan-rescue_MMBT2222A-7-F Q 0 0 Y Y 1 F N
-F0 "Q" -126 166 60 H V L CNN
-F1 "SmartFan-rescue_MMBT2222A-7-F" 206 0 60 V V C CNN
-F2 "digikey-footprints:SOT-23-3" 200 200 60 H I L CNN
-F3 "https://www.diodes.com/assets/Datasheets/ds30041.pdf" 200 300 60 H I L CNN
-F4 "MMBT2222A-FDICT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "MMBT2222A-7-F" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
-F8 "https://www.diodes.com/assets/Datasheets/ds30041.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/diodes-incorporated/MMBT2222A-7-F/MMBT2222A-FDICT-ND/815723" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "TRANS NPN 40V 0.6A SMD SOT23-3" 200 1000 60 H I L CNN "Description"
-F11 "Diodes Incorporated" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-C 0 0 128 0 1 0 f
-P 2 0 1 0 -150 0 -100 0 N
-P 2 0 1 0 -140 0 0 0 N
-P 2 0 1 0 0 -50 100 -100 N
-P 2 0 1 0 0 50 100 100 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 60 -50 80 -90 40 -100 60 -50 F
-X B 1 -200 0 100 R 50 50 1 1 I
-X E 2 100 -200 100 U 50 50 1 1 P
-X C 3 100 200 100 D 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# SmartFan-rescue_MMBT2222A-TP
-#
-DEF SmartFan-rescue_MMBT2222A-TP Q 0 0 Y Y 1 F N
-F0 "Q" -126 166 60 H V L CNN
-F1 "SmartFan-rescue_MMBT2222A-TP" 206 0 60 V V C CNN
-F2 "digikey-footprints:SOT-23-3" 200 200 60 H I L CNN
-F3 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" 200 300 60 H I L CNN
-F4 "MMBT2222ATPMSCT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "MMBT2222A-TP" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
-F8 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/micro-commercial-co/MMBT2222A-TP/MMBT2222ATPMSCT-ND/717394" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "TRANS NPN 40V 0.6A SOT23" 200 1000 60 H I L CNN "Description"
-F11 "Micro Commercial Co" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-C 0 0 128 0 1 0 f
-P 2 0 1 0 -150 0 -100 0 N
-P 2 0 1 0 -140 0 0 0 N
-P 2 0 1 0 0 -50 100 -100 N
-P 2 0 1 0 0 50 100 100 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 60 -50 80 -90 40 -100 60 -50 F
-X B 1 -200 0 100 R 50 50 1 1 I
-X E 2 100 -200 100 U 50 50 1 1 P
-X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -552,6 +394,34 @@ X P0.07 6 -600 -150 200 R 50 50 1 1 B
 X P0.06 7 -600 -250 200 R 50 50 1 1 B
 X P0.10 8 -600 -350 200 R 50 50 1 1 B
 X P0.09 9 -600 -450 200 R 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# power_+5V
+#
+DEF power_+5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
