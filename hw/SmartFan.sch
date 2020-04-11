@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:SmartFan-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
@@ -764,8 +764,6 @@ BTLE_LED
 Text Label 2350 9450 2    50   ~ 0
 ANT_LED
 Wire Wire Line
-	1250 8950 700  8950
-Wire Wire Line
 	1250 9050 700  9050
 $Comp
 L Interface_Expansion:MCP23017_SP U3
@@ -837,9 +835,6 @@ Wire Wire Line
 	11750 5650 12300 5650
 Wire Wire Line
 	11750 5750 12300 5750
-NoConn ~ 2850 4850
-NoConn ~ 2850 4950
-NoConn ~ 2850 5050
 Wire Notes Line
 	2650 10400 2650 8300
 Wire Notes Line
@@ -852,8 +847,6 @@ Wire Wire Line
 	2750 9400 3450 9400
 Wire Wire Line
 	2750 9300 3450 9300
-NoConn ~ 2850 4650
-NoConn ~ 2850 4750
 Wire Wire Line
 	4050 4450 4600 4450
 Wire Wire Line
@@ -953,18 +946,11 @@ Wire Wire Line
 	8700 4450 8700 6450
 Wire Wire Line
 	6350 4850 6350 6450
-NoConn ~ 1250 9150
-NoConn ~ 1250 9250
 Text Label 8900 4450 0    50   ~ 0
 SDA_5v
 Text Label 8900 4750 0    50   ~ 0
 SCL_5v
-NoConn ~ 1750 9750
-NoConn ~ 1750 9650
-NoConn ~ 1750 9550
 NoConn ~ 1250 9850
-NoConn ~ 2850 4450
-NoConn ~ 2850 4550
 $Comp
 L SmartFan-rescue:Conn_02x10_Odd_Even J1
 U 1 1 5D326262
@@ -1024,10 +1010,6 @@ Text Label 4600 4750 2    50   ~ 0
 SCL_3v3
 Text Label 4600 4850 2    50   ~ 0
 SDA_3v3
-Text Label 700  8950 0    50   ~ 0
-SDA_3v3
-Text Label 700  9050 0    50   ~ 0
-SCL_3v3
 $Comp
 L dk_Barrel-Power-Connectors:PJ-102A J2
 U 1 1 5D9EF230
@@ -1057,4 +1039,58 @@ Wire Wire Line
 Connection ~ 10500 6550
 Wire Wire Line
 	10500 6550 11050 6550
+Wire Wire Line
+	1250 8950 700  8950
+Wire Wire Line
+	1250 9150 700  9150
+Text Label 700  8950 0    50   ~ 0
+SDI_MOSI
+Text Label 700  9050 0    50   ~ 0
+SDI_MISO
+Text Label 700  9150 0    50   ~ 0
+SDI_SCK
+Wire Wire Line
+	1750 9650 2350 9650
+Wire Wire Line
+	1750 9750 2350 9750
+Wire Wire Line
+	1250 9250 700  9250
+Text Label 700  9250 0    50   ~ 0
+SDI_DC_RS
+Text Label 2350 9550 2    50   ~ 0
+SDI_CS_LCD
+Text Label 2350 9650 2    50   ~ 0
+SDI_CS_TS
+Wire Wire Line
+	1750 9550 2350 9550
+Text Label 2350 9750 2    50   ~ 0
+IRQ_TS
+Wire Wire Line
+	2850 4450 2100 4450
+Wire Wire Line
+	2850 4550 2100 4550
+Wire Wire Line
+	2850 4650 2100 4650
+Wire Wire Line
+	2850 4750 2100 4750
+Wire Wire Line
+	2850 4850 2100 4850
+Wire Wire Line
+	2850 4950 2100 4950
+Wire Wire Line
+	2850 5050 2100 5050
+Text Label 2100 4450 0    50   ~ 0
+SDI_MOSI
+Text Label 2100 4550 0    50   ~ 0
+SDI_MISO
+Text Label 2100 4650 0    50   ~ 0
+SDI_SCK
+Text Label 2100 4750 0    50   ~ 0
+SDI_DC_RS
+Text Label 2100 4850 0    50   ~ 0
+SDI_CS_LCD
+Text Label 2100 4950 0    50   ~ 0
+SDI_CS_TS
+Text Label 2100 5050 0    50   ~ 0
+IRQ_TS
 $EndSCHEMATC
