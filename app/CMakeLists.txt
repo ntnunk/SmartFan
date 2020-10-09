@@ -1,6 +1,15 @@
-# The following lines of boilerplate have to be in your project's
-# CMakeLists in this exact order for cmake to work correctly
+# The following lines of boilerplate have to be in your project's CMakeLists
+# in this exact order for cmake to work correctly
 cmake_minimum_required(VERSION 3.5)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(app-template)
+
+# Copy the compile_commands.json file to the app root for CCLS
+add_custom_target(
+    copy-compile-commands ALL
+    ${CMAKE_COMMAND} -E copy_if_different
+    ${CMAKE_BINARY_DIR}/compile_commands.json
+    ${CMAKE_CURRENT_LIST_DIR}
+)
+
+project(SmartFan)
